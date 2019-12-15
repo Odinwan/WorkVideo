@@ -6,7 +6,7 @@ import {
   View,
   TextInput,
 } from 'react-native';
-import Profile__style from './profile_styles';
+import Profile__style from './profile__styles';
 
 const Profile = props => {
   return (

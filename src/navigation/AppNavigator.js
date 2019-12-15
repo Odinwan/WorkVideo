@@ -1,11 +1,11 @@
 import React from 'react';
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
-import LogIn from '../pages/auth__pages/log__in/LogInComponents';
-import Main from '../pages/main__pages/MainPageComponent';
-import Profile from '../pages/main__pages/profile/ProfileComponent';
-import ForgotPass from '../pages/auth__pages/fog__pass/ForgotPassComponents';
-import SigIn from '../pages/auth__pages/sig__in/SigInComponents';
+import LogIn from '../screens/authScreens/LogIn/LogInComponents';
+import Main from '../screens/mainScreens/MainPageComponent';
+import Profile from '../screens/mainScreens/Profile/ProfileComponent';
+import ForgotPass from '../screens/authScreens/ForgotPass/ForgotPassComponents';
+import SigIn from '../screens/authScreens/SigIn/SigInComponents';
 
 const AuthStack = createStackNavigator({
   LogInPage: {screen: LogIn},
