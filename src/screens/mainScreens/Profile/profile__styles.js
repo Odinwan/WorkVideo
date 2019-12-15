@@ -7,6 +7,7 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+
   title: {
     fontSize: 20,
   },
