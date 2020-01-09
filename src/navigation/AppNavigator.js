@@ -1,32 +1,24 @@
 import React from 'react';
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
-import LogIn from '../screens/authScreens/LogIn/LogInComponents';
+import PropertyValue from '../screens/stepScreens/PropertyValue/PropertyValue';
 import Main from '../screens/mainScreens/MainPageComponent';
-import Profile from '../screens/mainScreens/Profile/ProfileComponent';
-import ForgotPass from '../screens/authScreens/ForgotPass/ForgotPassComponents';
-import SigIn from '../screens/authScreens/SigIn/SigInComponents';
+import DoYouNeed from '../screens/stepScreens/DoYouNeed/DoYouNeed';
+import MortrageBalance from '../screens/stepScreens/MortrageBalance/MortrageBalance';
 
-const AuthStack = createStackNavigator({
-  LogInPage: {screen: LogIn},
-  SigInPage: {screen: SigIn},
-  ForgotPassPage: {screen: ForgotPass},
-});
-const MainStack = createStackNavigator({
+const StepStack = createStackNavigator({
+  FirstStep: {screen: DoYouNeed},
+  SecondStep: {screen: MortrageBalance},
+  ThirdStep: {screen: PropertyValue},
   MainPage: {screen: Main},
-});
-const ProfileStack = createStackNavigator({
-  ProfilePage: {screen: Profile},
 });
 
 const RootNav = createSwitchNavigator(
   {
-    Profile: ProfileStack,
-    Auth: AuthStack,
-    Main: MainStack,
+    Step: StepStack,
   },
   {
-    initialRouteName: 'Auth',
+    initialRouteName: 'Step',
   },
 );
 export default createAppContainer(RootNav);
