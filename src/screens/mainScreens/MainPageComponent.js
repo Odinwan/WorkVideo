@@ -33,7 +33,8 @@ const Main = props => {
   const [emailFormFocus, setEmailFormFocus] = useState(false);
 
   const [formValid, setFormValid] = useState(false);
-  const [errorValid, setRrrorValid] = useState('');
+  const [errorValid, setErrorValid] = useState('');
+  const [errorEmail, setErrorEmail] = useState('');
 
   useEffect(() => {
     monthlyAmount();
@@ -41,12 +42,15 @@ const Main = props => {
   });
 
   useEffect(() => {
-    nameForm != '' ? setNameFormValid(true) : setNameFormValid(false);
-    lastNameForm != ''
+    emailFormFocus && validate(emailForm);
+    nameForm.length != 0 ? setNameFormValid(true) : setNameFormValid(false);
+    lastNameForm.length != 0
       ? setLastNameFormValid(true)
       : setLastNameFormValid(false);
-    phoneForm != '' ? setPhoneFormValid(true) : setPhoneFormValid(false);
-    emailForm != '' ? setEmailFormValid(true) : setEmailFormValid(false);
+    phoneForm.length != 0 ? setPhoneFormValid(true) : setPhoneFormValid(false);
+    emailForm.length != 0 && errorEmail === ''
+      ? setEmailFormValid(true)
+      : setEmailFormValid(false);
 
     if (
       nameFormValid &&
@@ -67,6 +71,9 @@ const Main = props => {
     lastNameFormValid,
     phoneFormValid,
     emailFormValid,
+    errorEmail,
+    emailForm,
+    errorValid,
   ]);
 
   const monthlyAmount = () => {
@@ -80,11 +87,24 @@ const Main = props => {
     setMortrage(result.toFixed(0));
   };
 
+  const validate = text => {
+    console.log(text);
+    let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (reg.test(text) === false) {
+      setErrorEmail('Email is Not Correct');
+    } else {
+      setErrorEmail('');
+    }
+  };
+  const errorValidation = () => {
+    setErrorValid('Enter required fields');
+  };
   const api = () => {
     setNameFormFocus(true);
     setLastNameFormFocus(true);
     setPhoneFormFocus(true);
     setEmailFormFocus(true);
+    validate(emailForm);
     formValid
       ? (console.log(
           nameForm,
@@ -94,9 +114,16 @@ const Main = props => {
           postCodeForm,
           referallForm,
         ),
-        setRrrorValid(''))
-      : setRrrorValid('Enter required fields');
+        setErrorValid(''))
+      : errorValidation();
   };
+  nameFormFocus && nameForm.length !== 0 ? styles.Input : styles.InputBase,
+    nameFormFocus && !nameFormValid && styles.inputStyleError,
+    console.log('nameFormFocus', nameFormFocus);
+  console.log('nameForm.length', nameForm.length);
+  console.log('nameFormFocus', nameFormFocus);
+  console.log('!nameFormValid', !nameFormValid);
+  console.log('____________________');
 
   return (
     <KeyboardAwareScrollView
@@ -219,8 +246,9 @@ const Main = props => {
                   setNameForm(text);
                   setNameFormFocus(true);
                 }}
+                value={nameForm}
                 style={[
-                  nameFormFocus && nameForm != ''
+                  nameFormFocus && nameForm.length !== 0
                     ? styles.Input
                     : styles.InputBase,
                   nameFormFocus && !nameFormValid && styles.inputStyleError,
@@ -244,8 +272,9 @@ const Main = props => {
                   setLastNameForm(text);
                   setLastNameFormFocus(true);
                 }}
+                value={lastNameForm}
                 style={[
-                  lastNameFormFocus && lastNameForm != ''
+                  lastNameFormFocus && lastNameForm.length !== 0
                     ? styles.Input
                     : styles.InputBase,
                   lastNameFormFocus &&
@@ -272,8 +301,9 @@ const Main = props => {
                   setPhoneForm(text);
                   setPhoneFormFocus(true);
                 }}
+                value={phoneForm}
                 style={[
-                  phoneFormFocus && phoneForm != ''
+                  phoneFormFocus && phoneForm.length !== 0
                     ? styles.Input
                     : styles.InputBase,
                   phoneFormFocus && !phoneFormValid && styles.inputStyleError,
@@ -289,7 +319,7 @@ const Main = props => {
                       ? styles.redText
                       : styles.blackText,
                   ]}>
-                  *
+                  * {errorEmail}
                 </Text>
               </View>
               <TextInput
@@ -297,8 +327,9 @@ const Main = props => {
                   setEmailForm(text);
                   setEmailFormFocus(true);
                 }}
+                value={emailForm}
                 style={[
-                  emailFormFocus && emailForm != ''
+                  emailFormFocus && emailForm.length !== 0
                     ? styles.Input
                     : styles.InputBase,
                   emailFormFocus && !emailFormValid && styles.inputStyleError,
@@ -311,6 +342,7 @@ const Main = props => {
               </View>
               <TextInput
                 onChangeText={text => setPostCodeForm(text)}
+                value={postCodeForm}
                 style={[
                   styles.inputStyle,
                   postCodeForm != '' ? styles.Input : styles.InputBase,
@@ -323,6 +355,7 @@ const Main = props => {
               </View>
               <TextInput
                 onChangeText={text => setReferallForm(text)}
+                value={referallForm}
                 style={[
                   styles.inputStyle,
                   referallForm != '' ? styles.Input : styles.InputBase,
