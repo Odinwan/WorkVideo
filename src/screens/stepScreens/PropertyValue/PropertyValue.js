@@ -6,6 +6,7 @@ import {
   TextInput,
   SafeAreaView,
 } from 'react-native';
+import styles from '../../mainScreens/main__style';
 
 const MortrageBalance = props => {
   const [mortrageValue, setMortrageValue] = useState(0);
@@ -18,26 +19,44 @@ const MortrageBalance = props => {
   }, [mortrageValue]);
 
   return (
-    <>
+    <View
+      style={{
+        backgroundColor: '#f0f0f0cf',
+        flex: 1,
+      }}>
       <SafeAreaView>
-        <View style={{paddingHorizontal: 30, paddingVertical: 30}}>
-          <Text style={{textAlign: 'center', marginVertical: 30}}>
-            Whats is your property value
-          </Text>
-          <Text style={{textAlign: 'center', marginVertical: 30}}>
+        <View style={{paddingHorizontal: 30, paddingTop: 130}}>
+          <View
+            style={{
+              justifyContent: 'center',
+              flexDirection: 'row',
+            }}>
+            <Text
+              style={{
+                textTransform: 'uppercase',
+                fontWeight: '500',
+                width: '90%',
+                textAlign: 'center',
+                fontSize: 30,
+                color: 'black',
+              }}>
+              Whats is your property value
+            </Text>
+          </View>
+
+          <Text
+            style={{textAlign: 'center', marginVertical: 10, color: 'grey'}}>
             (approxymately)
           </Text>
           <TextInput
+            keyboardType={'numeric'}
             onChangeText={text => setMortrageValue(text)}
-            style={{
-              borderWidth: 1,
-              borderColor: 'black',
-              borderRadius: 5,
-              paddingVertical: 10,
-              paddingHorizontal: 5,
-            }}
+            style={[mortrageDisable ? styles.stepInputBase : styles.stepInput]}
           />
           <TouchableOpacity
+            style={[
+              mortrageDisable ? styles.buttonDisable : styles.buttonActive,
+            ]}
             disabled={mortrageDisable}
             onPress={() =>
               navigate('MainPage', {
@@ -46,13 +65,13 @@ const MortrageBalance = props => {
                 propertyValue: propertyValue,
               })
             }>
-            <Text style={{textAlign: 'center', marginVertical: 30}}>
+            <Text style={{textAlign: 'center', marginVertical: 5}}>
               Get started
             </Text>
           </TouchableOpacity>
         </View>
       </SafeAreaView>
-    </>
+    </View>
   );
 };
 

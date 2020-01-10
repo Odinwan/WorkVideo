@@ -6,6 +6,7 @@ import {
   TextInput,
   SafeAreaView,
 } from 'react-native';
+import styles from '../../mainScreens/main__style';
 
 const DoYouNeed = props => {
   const [youNeed, setYouNeed] = useState(0);
@@ -17,35 +18,55 @@ const DoYouNeed = props => {
   }, [youNeed]);
 
   return (
-    <>
+    <View
+      style={{
+        backgroundColor: '#f0f0f0cf',
+        flex: 1,
+      }}>
       <SafeAreaView>
-        <View style={{paddingHorizontal: 30, paddingVertical: 30}}>
-          <Text style={{textAlign: 'center', marginVertical: 30}}>
-            How much do you need
-          </Text>
-          <Text style={{textAlign: 'center', marginVertical: 30}}>
+        <View
+          style={{
+            paddingHorizontal: 30,
+            paddingTop: 130,
+          }}>
+          <View
+            style={{
+              justifyContent: 'center',
+              flexDirection: 'row',
+            }}>
+            <Text
+              style={{
+                textTransform: 'uppercase',
+                fontWeight: '500',
+                width: '60%',
+                textAlign: 'center',
+                fontSize: 30,
+                color: 'black',
+              }}>
+              How much do you need
+            </Text>
+          </View>
+          <Text
+            style={{textAlign: 'center', marginVertical: 10, color: 'grey'}}>
             (approxymately)
           </Text>
           <TextInput
+            keyboardType={'numeric'}
             onChangeText={text => setYouNeed(text)}
-            style={{
-              borderWidth: 1,
-              borderColor: 'black',
-              borderRadius: 5,
-              paddingVertical: 10,
-              paddingHorizontal: 5,
-            }}
+            style={[needDisable ? styles.stepInputBase : styles.stepInput]}
           />
           <TouchableOpacity
+            style={[needDisable ? styles.buttonDisable : styles.buttonActive]}
             disabled={needDisable}
             onPress={() => navigate('SecondStep', {youNeed: youNeed})}>
-            <Text style={{textAlign: 'center', marginVertical: 30}}>
+            <Text
+              style={{textAlign: 'center', marginVertical: 5, color: 'black'}}>
               Get started
             </Text>
           </TouchableOpacity>
         </View>
       </SafeAreaView>
-    </>
+    </View>
   );
 };
 
