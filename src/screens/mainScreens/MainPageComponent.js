@@ -4,23 +4,25 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
+  ActivityIndicator,
   View,
   ScrollView,
 } from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-import styles from './main__style';
+import styles from './mainStyle';
 
 const Main = props => {
   const [impovement, setImpovement] = useState(0);
   const [mortrage, setMortrage] = useState(0);
-  const {youNeed, mortrageValue, propertyValue} = props.navigation.state.params;
+  const [mortrageValue, setMortrageValue] = useState(0);
+  const {youNeed, mortrageVal, propertyVal} = props.navigation.state.params;
 
   const [nameForm, setNameForm] = useState('');
   const [lastNameForm, setLastNameForm] = useState('');
   const [phoneForm, setPhoneForm] = useState('');
   const [emailForm, setEmailForm] = useState('');
   const [postCodeForm, setPostCodeForm] = useState('');
-  const [referallForm, setReferallForm] = useState('');
+  const [refferalForm, setRefferalForm] = useState('');
 
   const [nameFormValid, setNameFormValid] = useState(false);
   const [lastNameFormValid, setLastNameFormValid] = useState(false);
@@ -35,6 +37,19 @@ const Main = props => {
   const [formValid, setFormValid] = useState(false);
   const [errorValid, setErrorValid] = useState('');
   const [errorEmail, setErrorEmail] = useState('');
+  const [loader, setLoaderValue] = useState(false);
+
+  const {navigate} = props.navigation;
+
+  useEffect(() => {
+    if (mortrage < 1000) {
+      setMortrageValue(1000);
+    } else if (mortrage > 75000) {
+      setMortrageValue(75000);
+    } else {
+      setMortrageValue(mortrage);
+    }
+  }, [mortrage]);
 
   useEffect(() => {
     monthlyAmount();
@@ -47,7 +62,7 @@ const Main = props => {
     lastNameForm.length != 0
       ? setLastNameFormValid(true)
       : setLastNameFormValid(false);
-    phoneForm.length != 0 ? setPhoneFormValid(true) : setPhoneFormValid(false);
+    phoneForm.length >= 11 ? setPhoneFormValid(true) : setPhoneFormValid(false);
     emailForm.length != 0 && errorEmail === ''
       ? setEmailFormValid(true)
       : setEmailFormValid(false);
@@ -76,19 +91,32 @@ const Main = props => {
     errorValid,
   ]);
 
+  const validatedInputs = (text, type) => {
+    let numreg = /^[0-9]+$/;
+    if (type == 'phone') {
+      if (text.length > 1) {
+        if (numreg.test(text) && text != '') {
+          setPhoneForm(text);
+          setPhoneFormFocus(true);
+        }
+      } else {
+        setPhoneForm(text);
+      }
+    }
+  };
+
   const monthlyAmount = () => {
     let result = (youNeed * 0.0999) / 12;
     setImpovement(result.toFixed(1));
   };
 
   const maximumAmount = () => {
-    let percent = propertyValue * 0.8;
-    const result = percent - mortrageValue;
+    let percent = propertyVal * 0.8;
+    const result = percent - mortrageVal;
     setMortrage(result.toFixed(0));
   };
 
   const validate = text => {
-    console.log(text);
     let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (reg.test(text) === false) {
       setErrorEmail('Email is Not Correct');
@@ -99,38 +127,79 @@ const Main = props => {
   const errorValidation = () => {
     setErrorValid('Enter required fields');
   };
+  const numberWithCommas = x => {
+    x = x.toString();
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(x)) x = x.replace(pattern, '$1,$2');
+    return x;
+  };
+  const submit = async () => {
+    setLoaderValue(true);
+    await fetch('https://homemortgageadvice.ca/mform/', {
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        annual_household_income: youNeed,
+        existing_mortgage_amount: mortrageVal,
+        home_value: propertyVal,
+        lastNameForm,
+        nameForm,
+        phoneForm,
+        emailForm,
+        postCodeForm,
+        refferalForm,
+      }),
+    })
+      .then(function(res) {
+        console.log(res);
+      })
+      .catch(function(res) {
+        console.log(res);
+      });
+    navigate('Success');
+    setLoaderValue(false);
+  };
+
   const api = () => {
     setNameFormFocus(true);
     setLastNameFormFocus(true);
     setPhoneFormFocus(true);
     setEmailFormFocus(true);
     validate(emailForm);
-    formValid
-      ? (console.log(
-          nameForm,
-          lastNameForm,
-          phoneForm,
-          emailForm,
-          postCodeForm,
-          referallForm,
-        ),
-        setErrorValid(''))
-      : errorValidation();
+    formValid ? (setErrorValid(''), submit()) : errorValidation();
   };
-  nameFormFocus && nameForm.length !== 0 ? styles.Input : styles.InputBase,
-    nameFormFocus && !nameFormValid && styles.inputStyleError,
-    console.log('nameFormFocus', nameFormFocus);
-  console.log('nameForm.length', nameForm.length);
-  console.log('nameFormFocus', nameFormFocus);
-  console.log('!nameFormValid', !nameFormValid);
-  console.log('____________________');
+
+  const NameRef = React.createRef();
+  const LastNameRef = React.createRef();
+  const PhoneRef = React.createRef();
+  const EmailRef = React.createRef();
+  const CodeRef = React.createRef();
+  const RefferalReff = React.createRef();
 
   return (
     <KeyboardAwareScrollView
       resetScrollToCoords={{x: 0, y: 0}}
       contentContainerStyle={styles.container}
       scrollEnabled={false}>
-      <SafeAreaView>
+      <SafeAreaView style={{position: 'relative'}}>
+        {loader && (
+          <View
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              zIndex: 1000,
+              backgroundColor: '#00000059',
+              justifyContent: 'center',
+            }}>
+            <ActivityIndicator size="large" color="#00ff00" />
+          </View>
+        )}
         <ScrollView
           contentContainerStyle={{flexGrow: 1}}
           keyboardShouldPersistTaps="handled">
@@ -144,10 +213,11 @@ const Main = props => {
                 style={{
                   textTransform: 'uppercase',
                   fontWeight: '500',
-                  width: '90%',
+                  width: Platform.OS === 'ios' ? '90%' : '100%',
                   textAlign: 'center',
-                  fontSize: 30,
+                  fontSize: 25,
                   color: 'black',
+                  fontFamily: 'FuturaDemic',
                 }}>
                 Congratulation! you have been pre-approved
               </Text>
@@ -155,23 +225,52 @@ const Main = props => {
             <View
               style={{
                 justifyContent: 'center',
-                flexDirection: 'row',
               }}>
-              <Text
+              <View
                 style={{
-                  marginTop: 20,
-                  fontWeight: '500',
-                  width: '90%',
-                  textAlign: 'center',
-                  fontSize: 15,
-                  color: 'black',
+                  justifyContent: 'center',
+                  flexDirection: 'row',
                 }}>
-                You are eligible for the «Canadian home improvement program»
-                Available amount: up to{' '}
-                <Text style={{color: 'green'}}>${mortrage}</Text> CAD
-              </Text>
+                <Text
+                  style={{
+                    marginTop: 20,
+                    fontWeight: '500',
+                    width: '90%',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    textAlign: 'center',
+                    fontSize: 20,
+                    fontFamily: 'FuturaDemic',
+                    color: 'grey',
+                  }}>
+                  You are eligible for the «Canadian home improvement program»
+                </Text>
+              </View>
+              {mortrage > 0 ? (
+                <View
+                  style={{
+                    justifyContent: 'center',
+                    flexDirection: 'row',
+                  }}>
+                  <Text
+                    style={{
+                      fontWeight: '500',
+                      width: '100%',
+                      textAlign: 'center',
+                      fontSize: 20,
+                      fontFamily: 'FuturaDemic',
+                      color: 'grey',
+                    }}>
+                    Available amount: up to{' '}
+                    <Text style={{color: 'green'}}>
+                      ${numberWithCommas(mortrageValue)}
+                    </Text>{' '}
+                    CAD
+                  </Text>
+                </View>
+              ) : null}
             </View>
-            {mortrage > 300000 ? (
+            {mortrage > 75000 ? (
               <View
                 style={{
                   justifyContent: 'center',
@@ -191,6 +290,7 @@ const Main = props => {
                 </Text>
               </View>
             ) : null}
+            <Text />
             <View
               style={{
                 justifyContent: 'center',
@@ -198,17 +298,57 @@ const Main = props => {
               }}>
               <Text
                 style={{
-                  color: 'green',
-                  backgroundColor: '#defff3',
-                  paddingVertical: 20,
-                  marginTop: 20,
+                  marginTop: 40,
                   fontWeight: '500',
                   width: '90%',
                   textAlign: 'center',
-                  fontSize: 15,
+                  fontSize: 20,
+                  fontFamily: 'FuturaDemic',
+                  color: 'black',
+                  textTransform: 'uppercase',
                 }}>
-                ${impovement} / 12 month
+                average monthly payment
               </Text>
+            </View>
+            <View
+              style={{
+                justifyContent: 'center',
+                flexDirection: 'row',
+              }}>
+              <View
+                style={{
+                  backgroundColor: '#defff3',
+                  paddingVertical: 5,
+                  marginTop: 20,
+                  width: '90%',
+                }}>
+                <View>
+                  <Text
+                    style={{
+                      textAlign: 'center',
+                      fontWeight: 'bold',
+                      color: '#21a33e',
+                      fontSize: 35,
+                      fontFamily: 'FuturaDemic',
+                    }}>
+                    ${numberWithCommas(impovement)}
+                  </Text>
+                </View>
+                <View>
+                  <Text
+                    style={{
+                      marginTop: -10,
+                      textAlign: 'center',
+                      marginLeft: 50,
+                      fontSize: 18,
+                      fontWeight: '600',
+                      color: '#21a33e',
+                      fontFamily: 'FuturaDemic',
+                    }}>
+                    / month
+                  </Text>
+                </View>
+              </View>
             </View>
             <View
               style={{
@@ -221,17 +361,18 @@ const Main = props => {
                   fontWeight: '500',
                   width: '90%',
                   textAlign: 'center',
-                  fontSize: 13,
+                  fontSize: 20,
                   color: 'black',
+                  fontFamily: 'FuturaDemic',
                 }}>
                 To secure your pre-approval please provide your contact details
-                below .
+                below
               </Text>
             </View>
 
             <View style={{marginTop: 20}}>
               <View style={{flexDirection: 'row', marginLeft: 6}}>
-                <Text>Name</Text>
+                <Text style={{fontFamily: 'FuturaDemic'}}>Name</Text>
                 <Text
                   style={[
                     nameFormFocus && !nameFormValid
@@ -242,6 +383,8 @@ const Main = props => {
                 </Text>
               </View>
               <TextInput
+                ref={NameRef}
+                onSubmitEditing={() => LastNameRef.current.focus()}
                 onChangeText={text => {
                   setNameForm(text);
                   setNameFormFocus(true);
@@ -251,13 +394,13 @@ const Main = props => {
                   nameFormFocus && nameForm.length !== 0
                     ? styles.Input
                     : styles.InputBase,
-                  nameFormFocus && !nameFormValid && styles.inputStyleError,
+                  nameFormFocus && !nameFormValid && styles.inputStyleErrorMain,
                 ]}
               />
             </View>
             <View style={{marginTop: 20}}>
               <View style={{flexDirection: 'row', marginLeft: 6}}>
-                <Text>Last Name</Text>
+                <Text style={{fontFamily: 'FuturaDemic'}}>Last Name</Text>
                 <Text
                   style={[
                     lastNameFormFocus && !lastNameFormValid
@@ -268,6 +411,8 @@ const Main = props => {
                 </Text>
               </View>
               <TextInput
+                ref={LastNameRef}
+                onSubmitEditing={() => PhoneRef.current.focus()}
                 onChangeText={text => {
                   setLastNameForm(text);
                   setLastNameFormFocus(true);
@@ -279,13 +424,13 @@ const Main = props => {
                     : styles.InputBase,
                   lastNameFormFocus &&
                     !lastNameFormValid &&
-                    styles.inputStyleError,
+                    styles.inputStyleErrorMain,
                 ]}
               />
             </View>
             <View style={{marginTop: 20}}>
               <View style={{flexDirection: 'row', marginLeft: 6}}>
-                <Text>Phone</Text>
+                <Text style={{fontFamily: 'FuturaDemic'}}>Phone</Text>
                 <Text
                   style={[
                     phoneFormFocus && !phoneFormValid
@@ -296,23 +441,25 @@ const Main = props => {
                 </Text>
               </View>
               <TextInput
-                keyboardType={'numeric'}
+                ref={PhoneRef}
+                onSubmitEditing={() => EmailRef.current.focus()}
                 onChangeText={text => {
-                  setPhoneForm(text);
-                  setPhoneFormFocus(true);
+                  validatedInputs(text, 'phone');
                 }}
                 value={phoneForm}
                 style={[
                   phoneFormFocus && phoneForm.length !== 0
                     ? styles.Input
                     : styles.InputBase,
-                  phoneFormFocus && !phoneFormValid && styles.inputStyleError,
+                  phoneFormFocus &&
+                    !phoneFormValid &&
+                    styles.inputStyleErrorMain,
                 ]}
               />
             </View>
             <View style={{marginTop: 20}}>
               <View style={{flexDirection: 'row', marginLeft: 6}}>
-                <Text>Email</Text>
+                <Text style={{fontFamily: 'FuturaDemic'}}>Email</Text>
                 <Text
                   style={[
                     emailFormFocus && !emailFormValid
@@ -323,6 +470,8 @@ const Main = props => {
                 </Text>
               </View>
               <TextInput
+                ref={EmailRef}
+                onSubmitEditing={() => CodeRef.current.focus()}
                 onChangeText={text => {
                   setEmailForm(text);
                   setEmailFormFocus(true);
@@ -332,15 +481,19 @@ const Main = props => {
                   emailFormFocus && emailForm.length !== 0
                     ? styles.Input
                     : styles.InputBase,
-                  emailFormFocus && !emailFormValid && styles.inputStyleError,
+                  emailFormFocus &&
+                    !emailFormValid &&
+                    styles.inputStyleErrorMain,
                 ]}
               />
             </View>
             <View style={{marginTop: 20}}>
               <View style={{flexDirection: 'row', marginLeft: 6}}>
-                <Text>Post Code</Text>
+                <Text style={{fontFamily: 'FuturaDemic'}}>Post Code</Text>
               </View>
               <TextInput
+                ref={CodeRef}
+                onSubmitEditing={() => RefferalReff.current.focus()}
                 onChangeText={text => setPostCodeForm(text)}
                 value={postCodeForm}
                 style={[
@@ -351,25 +504,39 @@ const Main = props => {
             </View>
             <View style={{marginTop: 20}}>
               <View style={{flexDirection: 'row', marginLeft: 6}}>
-                <Text>Referall</Text>
+                <Text style={{fontFamily: 'FuturaDemic'}}>Referall</Text>
               </View>
               <TextInput
-                onChangeText={text => setReferallForm(text)}
-                value={referallForm}
+                ref={RefferalReff}
+                onChangeText={text => setRefferalForm(text)}
+                value={refferalForm}
                 style={[
                   styles.inputStyle,
-                  referallForm != '' ? styles.Input : styles.InputBase,
+                  refferalForm != '' ? styles.Input : styles.InputBase,
                 ]}
               />
             </View>
-            <TouchableOpacity style={styles.buttonActive} onPress={api}>
-              <Text style={{textAlign: 'center', marginVertical: 5}}>
-                Get started
+            <TouchableOpacity style={styles.MainButton} onPress={api}>
+              <Text
+                style={{
+                  textAlign: 'center',
+                  marginVertical: 5,
+                  textTransform: 'uppercase',
+                  fontWeight: 'bold',
+                  color: 'white',
+                  fontSize: 25,
+                }}>
+                Submit
               </Text>
             </TouchableOpacity>
             {errorValid != '' && (
               <Text
-                style={{color: 'red', textAlign: 'center', marginVertical: 5}}>
+                style={{
+                  color: 'red',
+                  fontFamily: 'FuturaDemiC',
+                  textAlign: 'center',
+                  marginVertical: 5,
+                }}>
                 {errorValid}
               </Text>
             )}
@@ -378,6 +545,10 @@ const Main = props => {
       </SafeAreaView>
     </KeyboardAwareScrollView>
   );
+};
+
+Main.navigationOptions = {
+  headerRight: () => <View />,
 };
 
 export default Main;

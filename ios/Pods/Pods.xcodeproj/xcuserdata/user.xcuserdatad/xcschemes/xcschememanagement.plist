@@ -24,22 +24,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-WorkVideo-tvOS.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WorkVideo-tvOSTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-WorkVideo.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WorkVideoTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

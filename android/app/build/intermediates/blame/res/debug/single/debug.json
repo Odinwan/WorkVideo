@@ -4,24 +4,24 @@
         "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/08cafc30f2c72cf5502efa1369d5eb1e/res/color/mtrl_btn_ripple_color.xml"
     },
     {
-        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/color_mtrl_chip_text_color.xml.flat",
-        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/08cafc30f2c72cf5502efa1369d5eb1e/res/color/mtrl_chip_text_color.xml"
-    },
-    {
         "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable_btn_radio_off_to_on_mtrl_animation.xml.flat",
         "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/drawable/btn_radio_off_to_on_mtrl_animation.xml"
+    },
+    {
+        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/color_mtrl_chip_text_color.xml.flat",
+        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/08cafc30f2c72cf5502efa1369d5eb1e/res/color/mtrl_chip_text_color.xml"
     },
     {
         "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/animator_mtrl_fab_transformation_sheet_collapse_spec.xml.flat",
         "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/08cafc30f2c72cf5502efa1369d5eb1e/res/animator/mtrl_fab_transformation_sheet_collapse_spec.xml"
     },
     {
-        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/anim_btn_checkbox_to_unchecked_icon_null_animation.xml.flat",
-        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/anim/btn_checkbox_to_unchecked_icon_null_animation.xml"
-    },
-    {
         "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/anim_btn_checkbox_to_unchecked_icon_null_animation.xml.flat",
+        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/anim/btn_checkbox_to_unchecked_icon_null_animation.xml"
     },
     {
         "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable_abc_ic_search_api_material.xml.flat",
@@ -48,28 +48,28 @@
         "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/drawable-xxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/color_abc_primary_text_material_light.xml.flat",
-        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/color/abc_primary_text_material_light.xml"
-    },
-    {
         "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/color_abc_primary_text_material_light.xml.flat",
+        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/color/abc_primary_text_material_light.xml"
     },
     {
         "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png"
     },
     {
-        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
-        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
+        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/layout_abc_list_menu_item_radio.xml.flat",
+        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/layout/abc_list_menu_item_radio.xml"
     },
     {
         "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/animator-v21_design_appbar_state_list_animator.xml.flat",
         "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/08cafc30f2c72cf5502efa1369d5eb1e/res/animator-v21/design_appbar_state_list_animator.xml"
     },
     {
-        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/layout_abc_list_menu_item_radio.xml.flat",
-        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/layout/abc_list_menu_item_radio.xml"
+        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
+        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
@@ -164,12 +164,12 @@
         "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/b61408922555b78066dacebce998a1b5/res/layout/dev_loading_view.xml"
     },
     {
-        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/anim_abc_slide_out_bottom.xml.flat",
-        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/anim/abc_slide_out_bottom.xml"
-    },
-    {
         "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable_abc_btn_colored_material.xml.flat",
         "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/drawable/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/anim_abc_slide_out_bottom.xml.flat",
+        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/anim/abc_slide_out_bottom.xml"
     },
     {
         "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/layout-v16_notification_template_custom_big.xml.flat",
@@ -300,12 +300,12 @@
         "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/color/abc_background_cache_hint_selector_material_dark.xml"
     },
     {
-        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable_redbox_top_border_background.xml.flat",
-        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/b61408922555b78066dacebce998a1b5/res/drawable/redbox_top_border_background.xml"
-    },
-    {
         "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable_redbox_top_border_background.xml.flat",
+        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/b61408922555b78066dacebce998a1b5/res/drawable/redbox_top_border_background.xml"
     },
     {
         "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
@@ -352,12 +352,12 @@
         "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/drawable/abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
-        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/drawable-xxhdpi-v4/abc_text_select_handle_middle_mtrl_dark.png"
-    },
-    {
         "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/layout_abc_action_bar_title_item.xml.flat",
         "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
+        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/drawable-xxhdpi-v4/abc_text_select_handle_middle_mtrl_dark.png"
     },
     {
         "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -388,16 +388,16 @@
         "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/08cafc30f2c72cf5502efa1369d5eb1e/res/animator/mtrl_chip_state_list_anim.xml"
     },
     {
-        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/anim_abc_popup_enter.xml.flat",
-        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/anim/abc_popup_enter.xml"
+        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable_btn_radio_on_to_off_mtrl_animation.xml.flat",
+        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/drawable/btn_radio_on_to_off_mtrl_animation.xml"
     },
     {
         "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/layout_redbox_view.xml.flat",
         "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/b61408922555b78066dacebce998a1b5/res/layout/redbox_view.xml"
     },
     {
-        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable_btn_radio_on_to_off_mtrl_animation.xml.flat",
-        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/drawable/btn_radio_on_to_off_mtrl_animation.xml"
+        "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/anim_abc_popup_enter.xml.flat",
+        "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/anim/abc_popup_enter.xml"
     },
     {
         "merged": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",

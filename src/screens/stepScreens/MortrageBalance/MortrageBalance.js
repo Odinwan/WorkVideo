@@ -5,73 +5,190 @@ import {
   View,
   TextInput,
   SafeAreaView,
+  ScrollView,
+  Dimensions,
 } from 'react-native';
-import styles from '../../mainScreens/main__style';
+import styles from '../../mainScreens/mainStyle';
 
-const PropertyValue = props => {
-  const [propertyValue, setPropertyValue] = useState(0);
-  const [propertyDisable, setPropertyDisable] = useState(false);
+const height = Dimensions.get('window').height;
+const width = Dimensions.get('window').width;
+
+const MortrageValue = props => {
+  const [mortrageVal, setMortrageValue] = useState(0);
+  const [mortrageValInput, setMortrageValueInput] = useState(0);
+  const [mortrageValueFocus, setMortrageValueFocus] = useState(false);
+  const [mortrageValueErrorText, setMortrageValueErrorText] = useState('');
+
+  const [mortrageDisable, setmortrageDisable] = useState(true);
+  const [placeholder, setPlaceholder] = useState('Example: $350,000...');
+
   const {navigate} = props.navigation;
-  const {youNeed} = props.navigation.state.params;
+  const {youNeed, propertyVal} = props.navigation.state.params;
+
+  const focusRef = React.createRef();
 
   useEffect(() => {
-    propertyValue == '' ? setPropertyDisable(true) : setPropertyDisable(false);
-  }, [propertyValue]);
+    focusRef.current.focus();
+  }, []);
+
+  const validateInput = text => {
+    let textClear = text.replace(/\D+/g, '');
+    setMortrageValue(textClear);
+    setMortrageValueInput(textClear);
+  };
+
+  const numberWithCommas = x => {
+    x = x.replace(/\D+/g, '').toString();
+    let pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(x)) x = x.replace(pattern, '$1,$2');
+    return `$ ${x}`;
+  };
 
   return (
-    <View
-      style={{
-        backgroundColor: '#f0f0f0cf',
-        flex: 1,
-      }}>
+    <View style={styles.container}>
       <SafeAreaView>
-        <View style={{paddingHorizontal: 30, paddingTop: 130}}>
+        <ScrollView keyboardShouldPersistTaps="handled">
           <View
             style={{
-              justifyContent: 'center',
-              flexDirection: 'row',
+              paddingTop: 60,
+              height: height,
+              width: width,
             }}>
+            <View
+              style={{
+                justifyContent: 'center',
+                flexDirection: 'row',
+              }}>
+              <Text
+                style={{
+                  textTransform: 'uppercase',
+                  fontWeight: '500',
+                  width: '100%',
+                  textAlign: 'center',
+                  fontSize: Platform.OS === 'ios' ? 32 : 34,
+                  color: 'black',
+                  fontFamily: 'FuturaDemiC',
+                }}>
+                What is your mortrage balance?
+              </Text>
+            </View>
+
             <Text
               style={{
-                textTransform: 'uppercase',
-                fontWeight: '500',
-                width: '90%',
                 textAlign: 'center',
-                fontSize: 30,
-                color: 'black',
+                color: 'grey',
+                fontFamily: 'FuturaDemiC',
               }}>
-              What is your mortrage balance
+              (approximately)
             </Text>
-          </View>
+            <View
+              style={{
+                position: 'relative',
+                justifyContent: 'center',
+                flexDirection: 'row',
+              }}>
+              <TextInput
+                ref={focusRef}
+                keyboardType={'numeric'}
+                value={mortrageValInput && numberWithCommas(mortrageValInput)}
+                onSubmitEditing={() =>
+                  navigate('MainPage', {
+                    youNeed: youNeed,
+                    propertyVal: propertyVal,
+                    mortrageVal: mortrageVal,
+                  })
+                }
+                onFocus={() => {
+                  setPlaceholder('');
+                }}
+                onBlur={() => {
+                  setPlaceholder('Example: $350,000...');
+                }}
+                placeholder={placeholder}
+                onChangeText={text => {
+                  validateInput(text);
+                  text = text.replace(/\D+/g, '').toString();
 
-          <Text
-            style={{textAlign: 'center', marginVertical: 10, color: 'grey'}}>
-            (approxymately)
-          </Text>
-          <TextInput
-            keyboardType={'numeric'}
-            onChangeText={text => setPropertyValue(text)}
-            style={[propertyDisable ? styles.stepInputBase : styles.stepInput]}
-          />
-          <TouchableOpacity
-            style={[
-              propertyDisable ? styles.buttonDisable : styles.buttonActive,
-            ]}
-            disabled={propertyDisable}
-            onPress={() =>
-              navigate('ThirdStep', {
-                youNeed: youNeed,
-                propertyValue: propertyValue,
-              })
-            }>
-            <Text style={{textAlign: 'center', marginVertical: 5}}>
-              Get started
-            </Text>
-          </TouchableOpacity>
-        </View>
+                  if (text > 2000000 || text == '') {
+                    setmortrageDisable(true);
+                    setMortrageValueFocus(true);
+                    text == ''
+                      ? setMortrageValueErrorText('enter amount')
+                      : setMortrageValueErrorText(
+                          'allowable amount is $ 2,000,000',
+                        );
+                  } else {
+                    setMortrageValueErrorText('');
+                    setmortrageDisable(false);
+                    setMortrageValueFocus(false);
+                  }
+                }}
+                style={[
+                  mortrageDisable ? styles.stepInputBase : styles.stepInput,
+                  mortrageValueFocus && styles.inputStyleError,
+                ]}
+              />
+              <View
+                style={{
+                  position: 'absolute',
+                  bottom: -22,
+                  right: 38,
+
+                  textAlign: 'center',
+                  justifyContent: 'center',
+                }}>
+                <Text
+                  style={{
+                    width: '100%',
+                    color: 'red',
+                    fontFamily: 'FuturaDemiC',
+                  }}>
+                  {mortrageValueErrorText}
+                </Text>
+              </View>
+            </View>
+            <View
+              style={{
+                position: 'absolute',
+                bottom: Platform.OS === 'ios' ? 150 : 100,
+                width: '100%',
+                justifyContent: 'center',
+                flexDirection: 'row',
+              }}>
+              <TouchableOpacity
+                style={[
+                  mortrageDisable ? styles.buttonDisable : styles.buttonActive,
+                ]}
+                disabled={mortrageDisable}
+                onPress={() =>
+                  navigate('MainPage', {
+                    youNeed: youNeed,
+                    propertyVal: propertyVal,
+                    mortrageVal: mortrageVal,
+                  })
+                }>
+                <Text
+                  style={{
+                    textAlign: 'center',
+                    marginVertical: 5,
+                    textTransform: 'uppercase',
+                    fontWeight: 'bold',
+                    color: 'white',
+                    fontSize: 20,
+                  }}>
+                  Continue
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </ScrollView>
       </SafeAreaView>
     </View>
   );
 };
 
-export default PropertyValue;
+MortrageValue.navigationOptions = {
+  headerRight: () => <View />,
+};
+
+export default MortrageValue;

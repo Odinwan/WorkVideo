@@ -5,66 +5,171 @@ import {
   View,
   TextInput,
   SafeAreaView,
+  ScrollView,
+  Dimensions,
 } from 'react-native';
-import styles from '../../mainScreens/main__style';
+import styles from '../../mainScreens/mainStyle';
+
+const height = Dimensions.get('window').height;
+const width = Dimensions.get('window').width;
 
 const DoYouNeed = props => {
   const [youNeed, setYouNeed] = useState(0);
-  const [needDisable, setNeedDisable] = useState(false);
+  const [youNeedInput, setYouNeedInput] = useState(0);
+  const [youNeedFocus, setYouNeedFocus] = useState(false);
+  const [placeholder, setPlaceholder] = useState('Example: $50,000...');
+  const [needDisable, setNeedDisable] = useState(true);
+  const [needErrorText, setNeedErrorText] = useState('');
   const {navigate} = props.navigation;
 
+  const focusRef = React.createRef();
+
   useEffect(() => {
-    youNeed == '' ? setNeedDisable(true) : setNeedDisable(false);
-  }, [youNeed]);
+    focusRef.current.focus();
+  }, []);
+  const validateInput = text => {
+    let textClear = text.replace(/\D+/g, '');
+    setYouNeed(textClear);
+    setYouNeedInput(textClear);
+  };
+
+  const numberWithCommas = x => {
+    x = x.replace(/\D+/g, '').toString();
+    let pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(x)) x = x.replace(pattern, '$1,$2');
+    return `$ ${x}`;
+  };
 
   return (
-    <View
-      style={{
-        backgroundColor: '#f0f0f0cf',
-        flex: 1,
-      }}>
+    <View style={styles.container}>
       <SafeAreaView>
-        <View
-          style={{
-            paddingHorizontal: 30,
-            paddingTop: 130,
-          }}>
+        <ScrollView keyboardShouldPersistTaps="handled">
           <View
             style={{
-              justifyContent: 'center',
-              flexDirection: 'row',
+              paddingTop: 60,
+              height: height,
+              width: width,
             }}>
+            <View
+              style={{
+                justifyContent: 'center',
+                flexDirection: 'row',
+              }}>
+              <Text
+                style={{
+                  textTransform: 'uppercase',
+                  fontWeight: '500',
+                  width: '80%',
+                  textAlign: 'center',
+                  fontSize: Platform.OS === 'ios' ? 32 : 36,
+                  color: 'black',
+                  fontFamily: 'FuturaDemiC',
+                }}>
+                How much do you need?
+              </Text>
+            </View>
             <Text
               style={{
-                textTransform: 'uppercase',
-                fontWeight: '500',
-                width: '60%',
                 textAlign: 'center',
-                fontSize: 30,
-                color: 'black',
+                color: 'grey',
+                fontFamily: 'FuturaDemiC',
               }}>
-              How much do you need
+              (approximately)
             </Text>
+            <View
+              style={{
+                position: 'relative',
+                justifyContent: 'center',
+                flexDirection: 'row',
+              }}>
+              <TextInput
+                ref={focusRef}
+                keyboardType={'numeric'}
+                value={youNeedInput && numberWithCommas(youNeedInput)}
+                placeholder={placeholder}
+                onSubmitEditing={async () => {
+                  let value = youNeed;
+                  await setYouNeed(0);
+                  navigate('SecondStep', {youNeed: value});
+                }}
+                onFocus={() => {
+                  setPlaceholder('');
+                }}
+                onBlur={() => {
+                  setPlaceholder('Example: $50,000...');
+                }}
+                onChangeText={text => {
+                  validateInput(text);
+                  text = text.replace(/\D+/g, '').toString();
+
+                  if (text > 100000 || text == '') {
+                    setNeedDisable(true);
+                    setYouNeedFocus(true);
+                    text == ''
+                      ? setNeedErrorText('enter amount')
+                      : setNeedErrorText('allowable amount is $ 100,000');
+                  } else {
+                    setNeedErrorText('');
+                    setNeedDisable(false);
+                    setYouNeedFocus(false);
+                  }
+                }}
+                style={[
+                  needDisable ? styles.stepInputBase : styles.stepInput,
+                  youNeedFocus && styles.inputStyleError,
+                ]}
+              />
+              <View
+                style={{
+                  position: 'absolute',
+                  bottom: -22,
+                  right: 38,
+                  textAlign: 'center',
+                  justifyContent: 'center',
+                }}>
+                <Text
+                  style={{
+                    width: '100%',
+                    color: 'red',
+                    fontFamily: 'FuturaDemiC',
+                  }}>
+                  {needErrorText}
+                </Text>
+              </View>
+            </View>
+            <View
+              style={{
+                position: 'absolute',
+                bottom: Platform.OS === 'ios' ? 150 : 100,
+                width: '100%',
+                justifyContent: 'center',
+                flexDirection: 'row',
+              }}>
+              <TouchableOpacity
+                style={[
+                  needDisable ? styles.buttonDisable : styles.buttonActive,
+                ]}
+                disabled={needDisable}
+                onPress={async () => {
+                  let value = youNeed;
+                  await setYouNeed(0);
+                  navigate('SecondStep', {youNeed: value});
+                }}>
+                <Text
+                  style={{
+                    textAlign: 'center',
+                    marginVertical: 5,
+                    textTransform: 'uppercase',
+                    fontWeight: 'bold',
+                    color: 'white',
+                    fontSize: 20,
+                  }}>
+                  Get started
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
-          <Text
-            style={{textAlign: 'center', marginVertical: 10, color: 'grey'}}>
-            (approxymately)
-          </Text>
-          <TextInput
-            keyboardType={'numeric'}
-            onChangeText={text => setYouNeed(text)}
-            style={[needDisable ? styles.stepInputBase : styles.stepInput]}
-          />
-          <TouchableOpacity
-            style={[needDisable ? styles.buttonDisable : styles.buttonActive]}
-            disabled={needDisable}
-            onPress={() => navigate('SecondStep', {youNeed: youNeed})}>
-            <Text
-              style={{textAlign: 'center', marginVertical: 5, color: 'black'}}>
-              Get started
-            </Text>
-          </TouchableOpacity>
-        </View>
+        </ScrollView>
       </SafeAreaView>
     </View>
   );
