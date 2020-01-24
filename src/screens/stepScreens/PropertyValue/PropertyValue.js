@@ -43,6 +43,14 @@ const PropertyValue = props => {
     return `$ ${x}`;
   };
 
+  const sumbit = () => {
+    if (!propertyDisable) {
+      navigate('ThirdStep', {
+        youNeed: youNeed,
+        propertyVal: propertyVal,
+      });
+    }
+  };
   return (
     <View style={styles.container}>
       <SafeAreaView>
@@ -96,12 +104,7 @@ const PropertyValue = props => {
                   setPlaceholder('Example: $750,000...');
                 }}
                 placeholder={placeholder}
-                onSubmitEditing={() =>
-                  navigate('ThirdStep', {
-                    youNeed: youNeed,
-                    propertyVal: propertyVal,
-                  })
-                }
+                onSubmitEditing={() => sumbit()}
                 onChangeText={text => {
                   validateInput(text);
                   text = text.replace(/\D+/g, '').toString();
@@ -157,12 +160,7 @@ const PropertyValue = props => {
                   propertyDisable ? styles.buttonDisable : styles.buttonActive,
                 ]}
                 disabled={propertyDisable}
-                onPress={() =>
-                  navigate('ThirdStep', {
-                    youNeed: youNeed,
-                    propertyVal: propertyVal,
-                  })
-                }>
+                onPress={() => sumbit()}>
                 <Text
                   style={{
                     textAlign: 'center',

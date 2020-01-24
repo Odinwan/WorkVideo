@@ -39,7 +39,13 @@ const DoYouNeed = props => {
     while (pattern.test(x)) x = x.replace(pattern, '$1,$2');
     return `$ ${x}`;
   };
-
+  const sumbit = async () => {
+    if (!needDisable) {
+      const value = youNeed;
+      await setYouNeed(0);
+      navigate('SecondStep', {youNeed: value});
+    }
+  };
   return (
     <View style={styles.container}>
       <SafeAreaView>
@@ -87,11 +93,7 @@ const DoYouNeed = props => {
                 keyboardType={'numeric'}
                 value={youNeedInput && numberWithCommas(youNeedInput)}
                 placeholder={placeholder}
-                onSubmitEditing={async () => {
-                  let value = youNeed;
-                  await setYouNeed(0);
-                  navigate('SecondStep', {youNeed: value});
-                }}
+                onSubmitEditing={async () => sumbit()}
                 onFocus={() => {
                   setPlaceholder('');
                 }}
@@ -150,11 +152,7 @@ const DoYouNeed = props => {
                   needDisable ? styles.buttonDisable : styles.buttonActive,
                 ]}
                 disabled={needDisable}
-                onPress={async () => {
-                  let value = youNeed;
-                  await setYouNeed(0);
-                  navigate('SecondStep', {youNeed: value});
-                }}>
+                onPress={async () => sumbit()}>
                 <Text
                   style={{
                     textAlign: 'center',

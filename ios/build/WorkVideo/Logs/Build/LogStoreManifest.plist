@@ -3,77 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>logFormatVersion</key>
-	<integer>10</integer>
+	<integer>9</integer>
 	<key>logs</key>
-	<dict>
-		<key>552BD5D6-80CE-4FE6-8BFA-B950A4747355</key>
-		<dict>
-			<key>className</key>
-			<string>IDECommandLineBuildLog</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>552BD5D6-80CE-4FE6-8BFA-B950A4747355.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>WorkVideo project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>WorkVideo</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Building workspace WorkVideo with scheme WorkVideo and configuration Debug</string>
-			<key>timeStartedRecording</key>
-			<real>601292682.84946895</real>
-			<key>timeStoppedRecording</key>
-			<real>601292691.64888895</real>
-			<key>title</key>
-			<string>Building workspace WorkVideo with scheme WorkVideo and configuration Debug</string>
-			<key>uniqueIdentifier</key>
-			<string>552BD5D6-80CE-4FE6-8BFA-B950A4747355</string>
-		</dict>
-		<key>9C6705A0-8DFA-41B9-8E28-126E10BF6665</key>
-		<dict>
-			<key>className</key>
-			<string>IDECommandLineBuildLog</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>9C6705A0-8DFA-41B9-8E28-126E10BF6665.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>WorkVideo project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>WorkVideo</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Building workspace WorkVideo with scheme WorkVideo and configuration Debug</string>
-			<key>timeStartedRecording</key>
-			<real>601126219.14241397</real>
-			<key>timeStoppedRecording</key>
-			<real>601126221.00936306</real>
-			<key>title</key>
-			<string>Building workspace WorkVideo with scheme WorkVideo and configuration Debug</string>
-			<key>uniqueIdentifier</key>
-			<string>9C6705A0-8DFA-41B9-8E28-126E10BF6665</string>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

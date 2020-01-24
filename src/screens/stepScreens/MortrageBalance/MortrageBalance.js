@@ -44,6 +44,15 @@ const MortrageValue = props => {
     return `$ ${x}`;
   };
 
+  const sumbit = () => {
+    if (!mortrageDisable) {
+      navigate('MainPage', {
+        youNeed: youNeed,
+        propertyVal: propertyVal,
+        mortrageVal: mortrageVal,
+      });
+    }
+  };
   return (
     <View style={styles.container}>
       <SafeAreaView>
@@ -91,13 +100,7 @@ const MortrageValue = props => {
                 ref={focusRef}
                 keyboardType={'numeric'}
                 value={mortrageValInput && numberWithCommas(mortrageValInput)}
-                onSubmitEditing={() =>
-                  navigate('MainPage', {
-                    youNeed: youNeed,
-                    propertyVal: propertyVal,
-                    mortrageVal: mortrageVal,
-                  })
-                }
+                onSubmitEditing={() => sumbit()}
                 onFocus={() => {
                   setPlaceholder('');
                 }}
@@ -160,13 +163,7 @@ const MortrageValue = props => {
                   mortrageDisable ? styles.buttonDisable : styles.buttonActive,
                 ]}
                 disabled={mortrageDisable}
-                onPress={() =>
-                  navigate('MainPage', {
-                    youNeed: youNeed,
-                    propertyVal: propertyVal,
-                    mortrageVal: mortrageVal,
-                  })
-                }>
+                onPress={() => sumbit()}>
                 <Text
                   style={{
                     textAlign: 'center',

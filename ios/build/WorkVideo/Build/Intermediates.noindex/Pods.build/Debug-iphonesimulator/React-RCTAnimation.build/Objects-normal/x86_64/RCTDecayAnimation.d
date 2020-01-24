@@ -1,24 +1,22 @@
 dependencies: \
-  /Users/user/WebstormProjects/WorkVideo/node_modules/react-native/Libraries/NativeAnimation/Drivers/RCTDecayAnimation.m \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Target\ Support\ Files/React-RCTAnimation/React-RCTAnimation-prefix.pch \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTDecayAnimation.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTAnimationDriver.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTBridgeModule.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTInspectorDevServerHelper.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTPackagerConnection.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTConvert.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTAnimationType.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTBorderStyle.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTLog.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTAssert.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTUtils.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTPointerEvents.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTTextDecorationLineType.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/Yoga/yoga/Yoga.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/Yoga/yoga/YGEnums.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/Yoga/yoga/YGMacros.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/Yoga/yoga/YGValue.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTAnimationUtils.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTValueAnimatedNode.h \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTAnimatedNode.h
+  /Users/oleggamega/WebstormProjects/WorkVideo/node_modules/react-native/Libraries/NativeAnimation/Drivers/RCTDecayAnimation.m \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Target\ Support\ Files/React-RCTAnimation/React-RCTAnimation-prefix.pch \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTDecayAnimation.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTAnimationDriver.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTBridgeModule.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTConvert.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTAnimationType.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTBorderStyle.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTLog.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTAssert.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTUtils.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTPointerEvents.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTTextDecorationLineType.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/Yoga/yoga/Yoga.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/Yoga/yoga/YGEnums.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/Yoga/yoga/YGMacros.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/Yoga/yoga/YGValue.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTAnimationUtils.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTValueAnimatedNode.h \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Public/React-Core/React/RCTAnimatedNode.h

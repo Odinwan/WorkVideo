@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-v26/values-v26.xml",
+            "outputFile": "/Users/oleggamega/WebstormProjects/WorkVideo/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/values-v26/values-v26.xml",
+                    "source": "/Users/oleggamega/.gradle/caches/transforms-2/files-2.1/66a59f3e3737beeb9b53f33e23b85949/res/values-v26/values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

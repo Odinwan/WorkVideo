@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Target\ Support\ Files/React-RCTLinking/React-RCTLinking-dummy.m \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Target\ Support\ Files/React-RCTLinking/React-RCTLinking-prefix.pch
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Target\ Support\ Files/React-RCTLinking/React-RCTLinking-dummy.m \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Target\ Support\ Files/React-RCTLinking/React-RCTLinking-prefix.pch
