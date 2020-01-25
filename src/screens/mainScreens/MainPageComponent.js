@@ -270,7 +270,7 @@ const Main = props => {
                 </View>
               ) : null}
             </View>
-            {mortrage > 75000 ? (
+            {mortrage > 0 ? (
               <View
                 style={{
                   justifyContent: 'center',

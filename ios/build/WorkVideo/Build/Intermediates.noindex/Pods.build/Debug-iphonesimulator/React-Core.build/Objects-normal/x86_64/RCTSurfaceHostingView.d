@@ -1,14 +1,16 @@
 dependencies: \
-  /Users/oleggamega/WebstormProjects/WorkVideo/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingView.mm \
-  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Target\ Support\ Files/React-Core/React-Core-prefix.pch \
-  /Users/oleggamega/WebstormProjects/WorkVideo/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingView.h \
-  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Private/React-Core/React/RCTSurfaceDelegate.h \
-  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Private/React-Core/React/RCTSurfaceStage.h \
-  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Private/React-Core/React/RCTDefines.h \
-  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Private/React-Core/React/RCTSurfaceSizeMeasureMode.h \
-  /Users/oleggamega/WebstormProjects/WorkVideo/node_modules/react-native/React/Base/RCTDefines.h \
-  /Users/oleggamega/WebstormProjects/WorkVideo/node_modules/react-native/React/Base/Surface/RCTSurface.h \
-  /Users/oleggamega/WebstormProjects/WorkVideo/node_modules/react-native/React/Base/Surface/RCTSurfaceDelegate.h \
-  /Users/oleggamega/WebstormProjects/WorkVideo/node_modules/react-native/React/Base/Surface/RCTSurfaceView.h \
-  /Users/oleggamega/WebstormProjects/WorkVideo/node_modules/react-native/React/Base/RCTUtils.h \
-  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Headers/Private/React-Core/React/RCTAssert.h
+  /Users/user/WebstormProjects/WorkVideo/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingView.mm \
+  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Target\ Support\ Files/React-Core/React-Core-prefix.pch \
+  /Users/user/WebstormProjects/WorkVideo/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingView.h \
+  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Private/React-Core/React/RCTSurfaceDelegate.h \
+  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Private/React-Core/React/RCTSurfaceStage.h \
+  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Private/React-Core/React/RCTDefines.h \
+  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Private/React-Core/React/RCTInspectorDevServerHelper.h \
+  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Private/React-Core/React/RCTPackagerConnection.h \
+  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Private/React-Core/React/RCTSurfaceSizeMeasureMode.h \
+  /Users/user/WebstormProjects/WorkVideo/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/user/WebstormProjects/WorkVideo/node_modules/react-native/React/Base/Surface/RCTSurface.h \
+  /Users/user/WebstormProjects/WorkVideo/node_modules/react-native/React/Base/Surface/RCTSurfaceDelegate.h \
+  /Users/user/WebstormProjects/WorkVideo/node_modules/react-native/React/Base/Surface/RCTSurfaceView.h \
+  /Users/user/WebstormProjects/WorkVideo/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Headers/Private/React-Core/React/RCTAssert.h

@@ -104,7 +104,7 @@ const DoYouNeed = props => {
                   validateInput(text);
                   text = text.replace(/\D+/g, '').toString();
 
-                  if (text > 100000 || text == '') {
+                  if (text == '') {
                     setNeedDisable(true);
                     setYouNeedFocus(true);
                     text == ''
