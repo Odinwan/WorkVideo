@@ -78,11 +78,15 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		GYGWD9nbNRc5lqffs1Vhn3WLJNI=
+		ioRMKk+0bq60OYy8Vly7hg/vS1o=
 		</data>
-		<key>Base.lproj/LaunchScreen.nib</key>
+		<key>Base.lproj/LaunchScreen.nib/objects-13.0+.nib</key>
 		<data>
-		z75yq6VerT59mFOuNS0YgYuko3E=
+		yazewSj62A2f+QjE6Gjf25yXedw=
+		</data>
+		<key>Base.lproj/LaunchScreen.nib/runtime.nib</key>
+		<data>
+		w7H3vLLktESrYKQGVHcMeDgyeCY=
 		</data>
 		<key>FuturaDemiC.ttf</key>
 		<data>
@@ -90,7 +94,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		l03+wL7TfLdgYHdCOBLIFmRU4yo=
+		6VY6LCiAIQNwoWokc6LhWZSucgc=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -301,22 +305,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GYGWD9nbNRc5lqffs1Vhn3WLJNI=
+			ioRMKk+0bq60OYy8Vly7hg/vS1o=
 			</data>
 			<key>hash2</key>
 			<data>
-			OzeBYcUk+PIgk26GHrJcOYXYZ9YAgJvzR3JXcxNgqHI=
+			xUkEyBSsQF1jMFA5GXUwP/JZLe5WrOkkRezyDlMSA54=
 			</data>
 		</dict>
-		<key>Base.lproj/LaunchScreen.nib</key>
+		<key>Base.lproj/LaunchScreen.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			z75yq6VerT59mFOuNS0YgYuko3E=
+			yazewSj62A2f+QjE6Gjf25yXedw=
 			</data>
 			<key>hash2</key>
 			<data>
-			NjTuRMKAp2pz/nYpPYRs21LAbGXVH7UUDzjEegPVnNE=
+			aB5KBx3BEM/GBS5Uv1y5TFO/6WDLH5stTQlLGVMjt0A=
+			</data>
+		</dict>
+		<key>Base.lproj/LaunchScreen.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			w7H3vLLktESrYKQGVHcMeDgyeCY=
+			</data>
+			<key>hash2</key>
+			<data>
+			E9C6GRDXXAr41NtijxuyBwpWj9JSXpCbexhTtI0rFr0=
 			</data>
 		</dict>
 		<key>FuturaDemiC.ttf</key>
@@ -333,7 +348,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -364,24 +379,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -417,13 +420,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

@@ -104,12 +104,12 @@ const DoYouNeed = props => {
                   validateInput(text);
                   text = text.replace(/\D+/g, '').toString();
 
-                  if (text > 100000 || text == '') {
+                  if (text > 700000 || text == '') {
                     setNeedDisable(true);
                     setYouNeedFocus(true);
                     text == ''
                       ? setNeedErrorText('enter amount')
-                      : setNeedErrorText('allowable amount is $ 100,000');
+                      : setNeedErrorText('allowable amount is $ 700,000');
                   } else {
                     setNeedErrorText('');
                     setNeedDisable(false);

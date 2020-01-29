@@ -112,13 +112,13 @@ const MortrageValue = props => {
                   validateInput(text);
                   text = text.replace(/\D+/g, '').toString();
 
-                  if (text > 2000000 || text == '') {
+                  if (text > 4000000 || text == '') {
                     setmortrageDisable(true);
                     setMortrageValueFocus(true);
                     text == ''
                       ? setMortrageValueErrorText('enter amount')
                       : setMortrageValueErrorText(
-                          'allowable amount is $ 2,000,000',
+                          'allowable amount is $ 4,000,000',
                         );
                   } else {
                     setMortrageValueErrorText('');

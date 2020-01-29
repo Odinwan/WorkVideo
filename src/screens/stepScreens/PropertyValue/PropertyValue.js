@@ -109,13 +109,13 @@ const PropertyValue = props => {
                   validateInput(text);
                   text = text.replace(/\D+/g, '').toString();
 
-                  if (text > 2000000 || text == '') {
+                  if (text > 4000000 || text == '') {
                     setPropertyDisable(true);
                     setPropertyValueFocus(true);
                     text == ''
                       ? setPropertyValueErrorText('enter amount')
                       : setPropertyValueErrorText(
-                          'allowable amount is $ 2000000',
+                          'allowable amount is $ 4000000',
                         );
                   } else {
                     setPropertyValueErrorText('');

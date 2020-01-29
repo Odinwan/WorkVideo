@@ -42,10 +42,11 @@ const Main = props => {
   const {navigate} = props.navigation;
 
   useEffect(() => {
+    console.log(mortrage);
     if (mortrage < 1000) {
       setMortrageValue(1000);
-    } else if (mortrage > 75000) {
-      setMortrageValue(75000);
+    } else if (mortrage > 300000) {
+      setMortrageValue(300000);
     } else {
       setMortrageValue(mortrage);
     }
@@ -270,7 +271,7 @@ const Main = props => {
                 </View>
               ) : null}
             </View>
-            {mortrage > 75000 ? (
+            {mortrage > 300000 ? (
               <View
                 style={{
                   justifyContent: 'center',
@@ -286,7 +287,7 @@ const Main = props => {
                     color: 'grey',
                   }}>
                   You can get the loan up to{' '}
-                  <Text style={{color: 'green'}}>$300,000</Text> CAD
+                  <Text style={{color: 'green'}}>$700,000</Text> CAD
                 </Text>
               </View>
             ) : null}
