@@ -143,17 +143,15 @@ const Main = props => {
       },
       method: 'POST',
       body: JSON.stringify({
-        account: {
-          annual_household_income: youNeed,
-          existing_mortgage_amount: mortrageVal,
-          property_value: propertyVal,
-          lastname: lastNameForm,
-          firstname: nameForm,
-          phonenumber: phoneForm,
-          email_address: emailForm,
-          postal_code: postCodeForm,
-          referral: refferalForm,
-        },
+        annual_household_income: youNeed,
+        existing_mortgage_amount: mortrageVal,
+        property_value: propertyVal,
+        lastname: lastNameForm,
+        firstname: nameForm,
+        phonenumber: phoneForm,
+        email_address: emailForm,
+        postal_code: postCodeForm,
+        referral: refferalForm,
       }),
     })
       .then(function(res) {
