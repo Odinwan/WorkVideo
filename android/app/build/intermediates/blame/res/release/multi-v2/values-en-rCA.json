@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/oleggamega/WebstormProjects/WorkVideo/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-en-rCA/values-en-rCA.xml",
+            "outputFile": "/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
-                    "source": "/Users/oleggamega/.gradle/caches/transforms-2/files-2.1/66a59f3e3737beeb9b53f33e23b85949/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/oleggamega/.gradle/caches/transforms-2/files-2.1/8167ee0114987a0543a52807e0728aab/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/Users/user/.gradle/caches/transforms-2/files-2.1/78e52baefbd686619d4842bfa05fcd78/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

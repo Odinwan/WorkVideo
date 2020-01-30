@@ -143,22 +143,24 @@ const Main = props => {
       },
       method: 'POST',
       body: JSON.stringify({
-        annual_household_income: youNeed,
-        existing_mortgage_amount: mortrageVal,
-        home_value: propertyVal,
-        lastNameForm,
-        nameForm,
-        phoneForm,
-        emailForm,
-        postCodeForm,
-        refferalForm,
+        account: {
+          annual_household_income: youNeed,
+          existing_mortgage_amount: mortrageVal,
+          property_value: propertyVal,
+          lastname: lastNameForm,
+          firstname: nameForm,
+          phonenumber: phoneForm,
+          email_address: emailForm,
+          postal_code: postCodeForm,
+          referral: refferalForm,
+        },
       }),
     })
       .then(function(res) {
-        console.log(res);
+        console.log('nice', res);
       })
       .catch(function(res) {
-        console.log(res);
+        console.log('error');
       });
     navigate('Success');
     setLoaderValue(false);
