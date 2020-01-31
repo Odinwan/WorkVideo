@@ -41,6 +41,8 @@ const Main = props => {
 
   const {navigate} = props.navigation;
 
+  console.log('props', props);
+
   useEffect(() => {
     console.log(mortrage);
     if (mortrage < 1000) {
@@ -107,6 +109,7 @@ const Main = props => {
   };
 
   const monthlyAmount = () => {
+    console.log('youNeed', youNeed);
     let result = (youNeed * 0.0999) / 12;
     setImpovement(result.toFixed(1));
   };
@@ -220,7 +223,28 @@ const Main = props => {
                   color: 'black',
                   fontFamily: 'FuturaDemic',
                 }}>
-                Congratulation! you have been pre-approved
+                {mortrage > 0
+                  ? 'Congratulation! you have been pre-approved'
+                  : `Sorry, You can not be pre-approved  this moment`}
+              </Text>
+            </View>
+            <View
+              style={{
+                marginTop: 20,
+                justifyContent: 'center',
+                flexDirection: 'row',
+              }}>
+              <Text
+                style={{
+                  textTransform: 'uppercase',
+                  fontWeight: '500',
+                  width: Platform.OS === 'ios' ? '90%' : '100%',
+                  textAlign: 'center',
+                  fontSize: 35,
+                  color: 'green',
+                  fontFamily: 'FuturaDemic',
+                }}>
+                {mortrage > 0 ? `$ ${numberWithCommas(youNeed)}` : null}
               </Text>
             </View>
             <View
@@ -244,7 +268,9 @@ const Main = props => {
                     fontFamily: 'FuturaDemic',
                     color: 'grey',
                   }}>
-                  You are eligible for the «Canadian home improvement program»
+                  {mortrage > 0
+                    ? `You are eligible for the «Canadian home improvement program»`
+                    : `To explore other options leave your information and we will contact you`}
                 </Text>
               </View>
               {mortrage > 0 ? (
@@ -292,84 +318,90 @@ const Main = props => {
               </View>
             ) : null}
             <Text />
-            <View
-              style={{
-                justifyContent: 'center',
-                flexDirection: 'row',
-              }}>
-              <Text
-                style={{
-                  marginTop: 40,
-                  fontWeight: '500',
-                  width: '90%',
-                  textAlign: 'center',
-                  fontSize: 20,
-                  fontFamily: 'FuturaDemic',
-                  color: 'black',
-                  textTransform: 'uppercase',
-                }}>
-                average monthly payment
-              </Text>
-            </View>
-            <View
-              style={{
-                justifyContent: 'center',
-                flexDirection: 'row',
-              }}>
+            {mortrage > 0 ? (
               <View
                 style={{
-                  backgroundColor: '#defff3',
-                  paddingVertical: 5,
-                  marginTop: 20,
-                  width: '90%',
+                  justifyContent: 'center',
+                  flexDirection: 'row',
                 }}>
-                <View>
-                  <Text
-                    style={{
-                      textAlign: 'center',
-                      fontWeight: 'bold',
-                      color: '#21a33e',
-                      fontSize: 35,
-                      fontFamily: 'FuturaDemic',
-                    }}>
-                    ${numberWithCommas(impovement)}
-                  </Text>
-                </View>
-                <View>
-                  <Text
-                    style={{
-                      marginTop: -10,
-                      textAlign: 'center',
-                      marginLeft: 50,
-                      fontSize: 18,
-                      fontWeight: '600',
-                      color: '#21a33e',
-                      fontFamily: 'FuturaDemic',
-                    }}>
-                    / month
-                  </Text>
-                </View>
+                <Text
+                  style={{
+                    marginTop: 40,
+                    fontWeight: '500',
+                    width: '90%',
+                    textAlign: 'center',
+                    fontSize: 20,
+                    fontFamily: 'FuturaDemic',
+                    color: 'black',
+                    textTransform: 'uppercase',
+                  }}>
+                  average monthly payment
+                </Text>
               </View>
-            </View>
+            ) : null}
             <View
               style={{
                 justifyContent: 'center',
                 flexDirection: 'row',
               }}>
-              <Text
-                style={{
-                  marginTop: 20,
-                  fontWeight: '500',
-                  width: '90%',
-                  textAlign: 'center',
-                  fontSize: 20,
-                  color: 'black',
-                  fontFamily: 'FuturaDemic',
-                }}>
-                To secure your pre-approval please provide your contact details
-                below
-              </Text>
+              {mortrage > 0 ? (
+                <View
+                  style={{
+                    backgroundColor: '#defff3',
+                    paddingVertical: 5,
+                    marginTop: 20,
+                    width: '90%',
+                  }}>
+                  <View>
+                    <Text
+                      style={{
+                        textAlign: 'center',
+                        fontWeight: 'bold',
+                        color: '#21a33e',
+                        fontSize: 35,
+                        fontFamily: 'FuturaDemic',
+                      }}>
+                      ${numberWithCommas(impovement)}
+                    </Text>
+                  </View>
+                  <View>
+                    <Text
+                      style={{
+                        marginTop: -10,
+                        textAlign: 'center',
+                        marginLeft: 50,
+                        fontSize: 18,
+                        fontWeight: '600',
+                        color: '#21a33e',
+                        fontFamily: 'FuturaDemic',
+                      }}>
+                      / month
+                    </Text>
+                  </View>
+                </View>
+              ) : null}
             </View>
+            {mortrage > 0 ? (
+              <View
+                style={{
+                  justifyContent: 'center',
+                  flexDirection: 'row',
+                }}>
+                <Text
+                  style={{
+                    marginTop: 20,
+                    fontWeight: '500',
+                    width: '90%',
+                    textAlign: 'center',
+                    fontSize: 20,
+                    color: 'black',
+                    fontFamily: 'FuturaDemic',
+                  }}>
+                  To secure your pre-approval please provide your contact
+                  details below
+                </Text>
+              </View>
+            ) : null}
 
             <View style={{marginTop: 20}}>
               <View style={{flexDirection: 'row', marginLeft: 6}}>

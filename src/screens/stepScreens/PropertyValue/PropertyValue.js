@@ -149,8 +149,7 @@ const PropertyValue = props => {
             </View>
             <View
               style={{
-                position: 'absolute',
-                bottom: Platform.OS === 'ios' ? 150 : 100,
+                marginTop: 40,
                 width: '100%',
                 justifyContent: 'center',
                 flexDirection: 'row',
