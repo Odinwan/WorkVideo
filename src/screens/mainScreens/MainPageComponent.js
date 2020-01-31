@@ -12,6 +12,7 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import styles from './mainStyle';
 
 const Main = props => {
+  console.log('props', props);
   const [impovement, setImpovement] = useState(0);
   const [mortrage, setMortrage] = useState(0);
   const [mortrageValue, setMortrageValue] = useState(0);
@@ -42,6 +43,10 @@ const Main = props => {
   const {navigate} = props.navigation;
 
   useEffect(() => {
+    console.log('props', props);
+  }, []);
+
+  useEffect(() => {
     console.log(mortrage);
     if (mortrage < 1000) {
       setMortrageValue(1000);
@@ -50,7 +55,9 @@ const Main = props => {
     } else {
       setMortrageValue(mortrage);
     }
-  }, [mortrage]);
+    console.log('youNeed', youNeed);
+    console.log('mortrage', mortrage);
+  }, [mortrage, youNeed]);
 
   useEffect(() => {
     monthlyAmount();
@@ -220,7 +227,28 @@ const Main = props => {
                   color: 'black',
                   fontFamily: 'FuturaDemic',
                 }}>
-                Congratulation! you have been pre-approved
+                {mortrage < 0
+                  ? `Sorry, You can not be pre-approved  this moment.`
+                  : `Congratulation! you have been pre-approved`}
+              </Text>
+            </View>
+            <View
+              style={{
+                marginTop: 20,
+                justifyContent: 'center',
+                flexDirection: 'row',
+              }}>
+              <Text
+                style={{
+                  textTransform: 'uppercase',
+                  fontWeight: '500',
+                  width: Platform.OS === 'ios' ? '90%' : '100%',
+                  textAlign: 'center',
+                  fontSize: 25,
+                  color: 'green',
+                  fontFamily: 'FuturaDemic',
+                }}>
+                {youNeed && `$ ${numberWithCommas(youNeed)}`}
               </Text>
             </View>
             <View
@@ -244,7 +272,9 @@ const Main = props => {
                     fontFamily: 'FuturaDemic',
                     color: 'grey',
                   }}>
-                  You are eligible for the «Canadian home improvement program»
+                  {mortrage < 0
+                    ? `To explore other options leave your information and we will contact you`
+                    : `You are eligible for the «Canadian home improvement program»`}
                 </Text>
               </View>
               {mortrage > 0 ? (
