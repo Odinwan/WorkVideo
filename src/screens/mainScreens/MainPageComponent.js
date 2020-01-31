@@ -12,6 +12,7 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import styles from './mainStyle';
 
 const Main = props => {
+  console.log('props', props);
   const [impovement, setImpovement] = useState(0);
   const [mortrage, setMortrage] = useState(0);
   const [mortrageValue, setMortrageValue] = useState(0);
@@ -44,6 +45,10 @@ const Main = props => {
   console.log('props', props);
 
   useEffect(() => {
+    console.log('props', props);
+  }, []);
+
+  useEffect(() => {
     console.log(mortrage);
     if (mortrage < 1000) {
       setMortrageValue(1000);
@@ -52,7 +57,9 @@ const Main = props => {
     } else {
       setMortrageValue(mortrage);
     }
-  }, [mortrage]);
+    console.log('youNeed', youNeed);
+    console.log('mortrage', mortrage);
+  }, [mortrage, youNeed]);
 
   useEffect(() => {
     monthlyAmount();

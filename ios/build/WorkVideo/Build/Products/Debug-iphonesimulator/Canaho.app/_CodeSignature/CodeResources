@@ -78,6 +78,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
+<<<<<<< HEAD
 		AAbwkYERR7AgQQX1FzzYuzOvptg=
 		</data>
 		<key>Base.lproj/LaunchScreen.nib/objects-13.0+.nib</key>
@@ -87,6 +88,17 @@
 		<key>Base.lproj/LaunchScreen.nib/runtime.nib</key>
 		<data>
 		KQFs5EkIpjxZXDL2TIKMwjvhlLU=
+=======
+		K6Il5EfYLkR7s3F9C2aeXA+KSQg=
+		</data>
+		<key>Base.lproj/LaunchScreen.nib/objects-13.0+.nib</key>
+		<data>
+		cAIQz9/VWLrjjywanM1CQ+/G+aE=
+		</data>
+		<key>Base.lproj/LaunchScreen.nib/runtime.nib</key>
+		<data>
+		pjk2u2/YugVB0EFGnPwpmiM03gc=
+>>>>>>> c6f10626636c02072fff005c7fe947442e54b35a
 		</data>
 		<key>FuturaDemiC.ttf</key>
 		<data>
@@ -305,33 +317,57 @@
 		<dict>
 			<key>hash</key>
 			<data>
+<<<<<<< HEAD
 			AAbwkYERR7AgQQX1FzzYuzOvptg=
 			</data>
 			<key>hash2</key>
 			<data>
 			J1jJuuaJcrKqrL4yJFwsZodINFOYp2o4GKe7W0Mflhw=
+=======
+			K6Il5EfYLkR7s3F9C2aeXA+KSQg=
+			</data>
+			<key>hash2</key>
+			<data>
+			CVgLLAEOmpho9EmKc65IU7/cKyByFzFYk5gUArG+usg=
+>>>>>>> c6f10626636c02072fff005c7fe947442e54b35a
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
+<<<<<<< HEAD
 			joQllKbiSpKu87RKmLmHhCjJ+Jc=
 			</data>
 			<key>hash2</key>
 			<data>
 			pgCifQ+ihrH1AT9I0sW3Zp0UMXxQXq2JAUICPeuPvE8=
+=======
+			cAIQz9/VWLrjjywanM1CQ+/G+aE=
+			</data>
+			<key>hash2</key>
+			<data>
+			Wep9ysGjtY2xgeDLYYS9LjDCHOgNefZwMRP1viUZXtI=
+>>>>>>> c6f10626636c02072fff005c7fe947442e54b35a
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
+<<<<<<< HEAD
 			KQFs5EkIpjxZXDL2TIKMwjvhlLU=
 			</data>
 			<key>hash2</key>
 			<data>
 			AaeShINPDKyHgNqT7v93lPFNHGmmjtRBdTJ3jTsNRKg=
+=======
+			pjk2u2/YugVB0EFGnPwpmiM03gc=
+			</data>
+			<key>hash2</key>
+			<data>
+			3zBOkhOpEGm/ZPbD4E0mytmYqgqIGVq/bIkSJRiWCvo=
+>>>>>>> c6f10626636c02072fff005c7fe947442e54b35a
 			</data>
 		</dict>
 		<key>FuturaDemiC.ttf</key>

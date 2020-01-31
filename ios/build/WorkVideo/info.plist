@@ -3,7 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>LastAccessedDate</key>
+<<<<<<< HEAD
 	<date>2020-01-31T11:47:22Z</date>
+=======
+	<date>2020-01-31T09:30:37Z</date>
+>>>>>>> c6f10626636c02072fff005c7fe947442e54b35a
 	<key>WorkspacePath</key>
 	<string>/Users/user/WebstormProjects/WorkVideo/ios/WorkVideo.xcworkspace</string>
 </dict>
