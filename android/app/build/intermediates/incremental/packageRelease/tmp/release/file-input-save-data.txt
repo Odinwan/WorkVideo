@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Feb 04 15:09:14 EET 2020
+#Tue Feb 04 16:24:31 EET 2020
 56.path=lib/x86/libyoga.so
 5.base=/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/transforms/mergeJniLibs/release/0
 42.base=/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/transforms/mergeJniLibs/release/0
