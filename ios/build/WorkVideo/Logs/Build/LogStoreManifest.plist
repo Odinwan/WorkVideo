@@ -6,6 +6,40 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>A2F393A6-A5B8-4D24-BD5D-34B82C4D9E73</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A2F393A6-A5B8-4D24-BD5D-34B82C4D9E73.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>WorkVideo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>WorkVideo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace WorkVideo with scheme WorkVideo and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>602438356.48585796</real>
+			<key>timeStoppedRecording</key>
+			<real>602438357.18323898</real>
+			<key>title</key>
+			<string>Building workspace WorkVideo with scheme WorkVideo and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>A2F393A6-A5B8-4D24-BD5D-34B82C4D9E73</string>
+		</dict>
 		<key>BDC1CB1D-B88D-4C49-B738-BCAFB7C17AAA</key>
 		<dict>
 			<key>className</key>

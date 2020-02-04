@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Jan 21 11:39:43 EET 2020
+#Fri Jan 31 16:20:59 EET 2020
 56.path=lib/armeabi-v7a/libglog_init.so
 5.base=/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 42.base=/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/transforms/mergeJniLibs/debug/0

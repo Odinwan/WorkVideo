@@ -8,7 +8,7 @@ MERGED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidM
 MERGED from [:react-native-gesture-handler] /Users/user/WebstormProjects/WorkVideo/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-reanimated] /Users/user/WebstormProjects/WorkVideo/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-screens] /Users/user/WebstormProjects/WorkVideo/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [com.facebook.react:react-native:0.61.5] /Users/user/.gradle/caches/transforms-2/files-2.1/b61408922555b78066dacebce998a1b5/AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.react:react-native:0.61.4] /Users/user/.gradle/caches/transforms-2/files-2.1/426fb5602aeb4b9a1969982f5d894ce2/AndroidManifest.xml:2:1-13:12
 MERGED from [org.webkit:android-jsc:r245459] /Users/user/.gradle/caches/transforms-2/files-2.1/d50dd641c726a8de66c9061d78c282b6/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.material:material:1.0.0] /Users/user/.gradle/caches/transforms-2/files-2.1/08cafc30f2c72cf5502efa1369d5eb1e/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/user/.gradle/caches/transforms-2/files-2.1/22e6fc24e85889af4ef273be871cdf68/AndroidManifest.xml:17:1-24:12
@@ -56,9 +56,9 @@ INJECTED from /Users/user/WebstormProjects/WorkVideo/android/app/src/debug/Andro
 INJECTED from /Users/user/WebstormProjects/WorkVideo/android/app/src/debug/AndroidManifest.xml:2:1-8:12
 INJECTED from /Users/user/WebstormProjects/WorkVideo/android/app/src/debug/AndroidManifest.xml:2:1-8:12
 	package
-		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:2:3-26
+		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:2:3-27
 		INJECTED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:2:3-26
+		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:2:3-27
 		INJECTED from /Users/user/WebstormProjects/WorkVideo/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml
@@ -80,8 +80,8 @@ application
 ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:6:5-25:19
 MERGED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:6:5-25:19
 MERGED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:6:5-25:19
-MERGED from [com.facebook.react:react-native:0.61.5] /Users/user/.gradle/caches/transforms-2/files-2.1/b61408922555b78066dacebce998a1b5/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.react:react-native:0.61.5] /Users/user/.gradle/caches/transforms-2/files-2.1/b61408922555b78066dacebce998a1b5/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.61.4] /Users/user/.gradle/caches/transforms-2/files-2.1/426fb5602aeb4b9a1969982f5d894ce2/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.61.4] /Users/user/.gradle/caches/transforms-2/files-2.1/426fb5602aeb4b9a1969982f5d894ce2/AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.material:material:1.0.0] /Users/user/.gradle/caches/transforms-2/files-2.1/08cafc30f2c72cf5502efa1369d5eb1e/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] /Users/user/.gradle/caches/transforms-2/files-2.1/08cafc30f2c72cf5502efa1369d5eb1e/AndroidManifest.xml:22:5-20
 MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/user/.gradle/caches/transforms-2/files-2.1/3bcc43becf8cde8b4f82e17d0273e88f/AndroidManifest.xml:11:5-20
@@ -98,8 +98,8 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/user
 	tools:ignore
 		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/debug/AndroidManifest.xml:7:75-114
 	android:roundIcon
-		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:10:7-52
-		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:10:7-52
+		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:10:7-46
+		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:10:7-46
 	tools:targetApi
 		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/debug/AndroidManifest.xml:7:54-74
 	android:icon
@@ -114,9 +114,9 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/user
 	android:usesCleartextTraffic
 		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/debug/AndroidManifest.xml:7:18-53
 	android:name
-		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:7:7-38
-		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:7:7-38
-activity#com.workvideo.MainActivity
+		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:7:7-52
+		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:7:7-52
+activity#com.canaho.app.MainActivity
 ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:13:7-23:18
 	android:label
 		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:16:9-41
@@ -127,7 +127,7 @@ ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidMa
 	android:orientation
 		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:15:9-41
 	android:name
-		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:14:9-37
+		ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:14:9-51
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /Users/user/WebstormProjects/WorkVideo/android/app/src/main/AndroidManifest.xml:19:9-22:25
 action#android.intent.action.MAIN
@@ -152,8 +152,8 @@ MERGED from [:react-native-reanimated] /Users/user/WebstormProjects/WorkVideo/no
 MERGED from [:react-native-reanimated] /Users/user/WebstormProjects/WorkVideo/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-screens] /Users/user/WebstormProjects/WorkVideo/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-screens] /Users/user/WebstormProjects/WorkVideo/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.61.5] /Users/user/.gradle/caches/transforms-2/files-2.1/b61408922555b78066dacebce998a1b5/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.61.5] /Users/user/.gradle/caches/transforms-2/files-2.1/b61408922555b78066dacebce998a1b5/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.4] /Users/user/.gradle/caches/transforms-2/files-2.1/426fb5602aeb4b9a1969982f5d894ce2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.4] /Users/user/.gradle/caches/transforms-2/files-2.1/426fb5602aeb4b9a1969982f5d894ce2/AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] /Users/user/.gradle/caches/transforms-2/files-2.1/d50dd641c726a8de66c9061d78c282b6/AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] /Users/user/.gradle/caches/transforms-2/files-2.1/d50dd641c726a8de66c9061d78c282b6/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.material:material:1.0.0] /Users/user/.gradle/caches/transforms-2/files-2.1/08cafc30f2c72cf5502efa1369d5eb1e/AndroidManifest.xml:20:5-44

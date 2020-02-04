@@ -40,14 +40,19 @@ const MortrageValue = props => {
   const numberWithCommas = x => {
     x = x.replace(/\D+/g, '').toString();
     let pattern = /(-?\d+)(\d{3})/;
-    while (pattern.test(x)) x = x.replace(pattern, '$1,$2');
+    while (pattern.test(x)) {
+      x = x.replace(pattern, '$1,$2');
+    }
     return `$ ${x}`;
   };
 
   const sumbit = () => {
     if (!mortrageDisable) {
+      let percent = propertyVal * 0.8;
+      const result = percent - mortrageVal;
+
       navigate('MainPage', {
-        youNeed: youNeed,
+        youNeed: youNeed > result ? result : youNeed,
         propertyVal: propertyVal,
         mortrageVal: mortrageVal,
       });

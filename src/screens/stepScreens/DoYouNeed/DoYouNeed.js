@@ -36,13 +36,16 @@ const DoYouNeed = props => {
   const numberWithCommas = x => {
     x = x.replace(/\D+/g, '').toString();
     let pattern = /(-?\d+)(\d{3})/;
-    while (pattern.test(x)) x = x.replace(pattern, '$1,$2');
+    while (pattern.test(x)) {
+      x = x.replace(pattern, '$1,$2');
+    }
     return `$ ${x}`;
   };
   const sumbit = async () => {
     if (!needDisable) {
       const value = youNeed;
-      await setYouNeed(0);
+      // await setYouNeed(0);
+      // await setYouNeedInput(0);
       navigate('SecondStep', {youNeed: value});
     }
   };

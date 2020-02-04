@@ -1,4 +1,4 @@
-#Thu Jan 30 16:25:04 EET 2020
+#Tue Feb 04 13:32:22 EET 2020
 base.0=/Users/user/WebstormProjects/WorkVideo/android/app/build/intermediates/transforms/dexMerger/release/0
 path.0=classes.dex
 renamed.0=classes.dex

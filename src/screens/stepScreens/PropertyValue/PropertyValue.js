@@ -45,6 +45,7 @@ const PropertyValue = props => {
 
   const sumbit = () => {
     if (!propertyDisable) {
+      console.log('YOUNEED', youNeed);
       navigate('ThirdStep', {
         youNeed: youNeed,
         propertyVal: propertyVal,

@@ -62,8 +62,8 @@ const Main = props => {
   }, [mortrage, youNeed]);
 
   useEffect(() => {
-    monthlyAmount();
     maximumAmount();
+    monthlyAmount();
   });
 
   useEffect(() => {
@@ -115,9 +115,10 @@ const Main = props => {
     }
   };
 
-  const monthlyAmount = () => {
-    console.log('youNeed', youNeed);
+  const monthlyAmount = async () => {
+    console.log('youNeed', youNeed, mortrage);
     let result = (youNeed * 0.0999) / 12;
+    console.log('result monthlyAmount', result);
     setImpovement(result.toFixed(1));
   };
 
@@ -125,6 +126,7 @@ const Main = props => {
     let percent = propertyVal * 0.8;
     const result = percent - mortrageVal;
     setMortrage(result.toFixed(0));
+    console.log('result Mortrage', result);
   };
 
   const validate = text => {
@@ -141,7 +143,9 @@ const Main = props => {
   const numberWithCommas = x => {
     x = x.toString();
     var pattern = /(-?\d+)(\d{3})/;
-    while (pattern.test(x)) x = x.replace(pattern, '$1,$2');
+    while (pattern.test(x)) {
+      x = x.replace(pattern, '$1,$2');
+    }
     return x;
   };
   const submit = async () => {

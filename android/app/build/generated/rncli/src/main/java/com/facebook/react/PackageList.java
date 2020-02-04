@@ -11,8 +11,8 @@ import com.facebook.react.shell.MainReactPackage;
 import java.util.Arrays;
 import java.util.ArrayList;
 
-import com.workvideo.BuildConfig;
-import com.workvideo.R;
+import com.canaho.app.BuildConfig;
+import com.canaho.app.R;
 
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
