@@ -533,7 +533,7 @@ const Main = props => {
             </View>
             <View style={{marginTop: 20}}>
               <View style={{flexDirection: 'row', marginLeft: 6}}>
-                <Text style={{fontFamily: 'FuturaDemic'}}>Post Code</Text>
+                <Text style={{fontFamily: 'FuturaDemic'}}>Address</Text>
               </View>
               <TextInput
                 ref={CodeRef}
