@@ -36,7 +36,7 @@ const SuccessPage = props => {
             color: 'black',
             fontFamily: 'FuturaDemic',
           }}>
-          Thank you, we will contact you with in next 24 hours
+          Thank you, we will contact you within next 24 hours
         </Text>
         <Text
           style={{
