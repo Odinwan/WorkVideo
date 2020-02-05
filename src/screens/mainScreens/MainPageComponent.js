@@ -154,10 +154,11 @@ const Main = props => {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
+        os: Platform.OS,
       },
       method: 'POST',
       body: JSON.stringify({
-        annual_household_income: youNeed,
+        annual_household_income: youNeed.toString(),
         existing_mortgage_amount: mortrageVal,
         property_value: propertyVal,
         lastname: lastNameForm,
