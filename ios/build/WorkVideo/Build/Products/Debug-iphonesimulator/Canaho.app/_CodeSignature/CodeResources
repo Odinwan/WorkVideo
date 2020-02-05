@@ -78,15 +78,15 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		NfGm0hmKI18UzZM59TVbKiwadb0=
+		hqypPA4HPfjgoijrCeOEpzVrIHI=
 		</data>
-		<key>Base.lproj/LaunchScreen.nib/objects-13.0+.nib</key>
+		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		RZ4dq/sXakBpYMyTqpKCRHdlLHM=
+		QcMO+HZcgmKmP7gPfmQvHPPr2aQ=
 		</data>
-		<key>Base.lproj/LaunchScreen.nib/runtime.nib</key>
+		<key>Base.lproj/LaunchScreen.nib~HEAD</key>
 		<data>
-		PwOlUGJcyj1bUcmGN2iWqd6wT8o=
+		z75yq6VerT59mFOuNS0YgYuko3E=
 		</data>
 		<key>FuturaDemiC.ttf</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		6VY6LCiAIQNwoWokc6LhWZSucgc=
+		PlN+1wnhQeKqGOJyitxgIzgwafo=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -305,33 +305,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NfGm0hmKI18UzZM59TVbKiwadb0=
+			hqypPA4HPfjgoijrCeOEpzVrIHI=
 			</data>
 			<key>hash2</key>
 			<data>
-			j9WMWV1OKI1jdoxAkDZwgrSGzSUdhqgAost7uZchJGY=
+			WLpiFmXP9+2ICXGXpMhps08PDl5Ky3qbh052iEE2J1Q=
 			</data>
 		</dict>
-		<key>Base.lproj/LaunchScreen.nib/objects-13.0+.nib</key>
+		<key>Base.lproj/LaunchScreen.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RZ4dq/sXakBpYMyTqpKCRHdlLHM=
+			QcMO+HZcgmKmP7gPfmQvHPPr2aQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			pGJXdm16oJa11XRtRiCFZHmUh6K3yaHbzutwzgX9bZk=
+			VA5/gdCbLOMVxlum2G7Xpa2K4H6gGH1QXdsF+yYcUaw=
 			</data>
 		</dict>
-		<key>Base.lproj/LaunchScreen.nib/runtime.nib</key>
+		<key>Base.lproj/LaunchScreen.nib~HEAD</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PwOlUGJcyj1bUcmGN2iWqd6wT8o=
+			z75yq6VerT59mFOuNS0YgYuko3E=
 			</data>
 			<key>hash2</key>
 			<data>
-			AFFM8rnynnuEoiQKx+a5BnxO6Nm1RpdUs31rFEEXThw=
+			NjTuRMKAp2pz/nYpPYRs21LAbGXVH7UUDzjEegPVnNE=
 			</data>
 		</dict>
 		<key>FuturaDemiC.ttf</key>
@@ -348,7 +348,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^.*</key>
+		<key>^</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -379,12 +379,24 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
+		<key>^</key>
+		<dict>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
+		</dict>
+		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
+		<dict>
+			<key>nested</key>
+			<true/>
+			<key>weight</key>
+			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -420,6 +432,13 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
+		</dict>
+		<key>^[^/]+$</key>
+		<dict>
+			<key>nested</key>
+			<true/>
+			<key>weight</key>
+			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Target\ Support\ Files/React-RCTSettings/React-RCTSettings-dummy.m \
-  /Users/user/WebstormProjects/WorkVideo/ios/Pods/Target\ Support\ Files/React-RCTSettings/React-RCTSettings-prefix.pch
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Target\ Support\ Files/React-RCTSettings/React-RCTSettings-dummy.m \
+  /Users/oleggamega/WebstormProjects/WorkVideo/ios/Pods/Target\ Support\ Files/React-RCTSettings/React-RCTSettings-prefix.pch

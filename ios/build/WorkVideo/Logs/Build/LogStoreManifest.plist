@@ -3,43 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>logFormatVersion</key>
-	<integer>10</integer>
+	<integer>9</integer>
 	<key>logs</key>
-	<dict>
-		<key>67E57EB8-B943-4B32-9048-8D86AE6A8BE8</key>
-		<dict>
-			<key>className</key>
-			<string>IDECommandLineBuildLog</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>67E57EB8-B943-4B32-9048-8D86AE6A8BE8.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>E</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>WorkVideo project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>WorkVideo</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Building workspace WorkVideo with scheme WorkVideo and configuration Debug</string>
-			<key>timeStartedRecording</key>
-			<real>602517509.69880497</real>
-			<key>timeStoppedRecording</key>
-			<real>602517510.480667</real>
-			<key>title</key>
-			<string>Building workspace WorkVideo with scheme WorkVideo and configuration Debug</string>
-			<key>uniqueIdentifier</key>
-			<string>67E57EB8-B943-4B32-9048-8D86AE6A8BE8</string>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
