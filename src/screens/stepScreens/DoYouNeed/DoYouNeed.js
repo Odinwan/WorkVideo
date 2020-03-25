@@ -44,8 +44,6 @@ const DoYouNeed = props => {
   const sumbit = async () => {
     if (!needDisable) {
       const value = youNeed;
-      // await setYouNeed(0);
-      // await setYouNeedInput(0);
       navigate('SecondStep', {youNeed: value});
     }
   };
@@ -74,7 +72,7 @@ const DoYouNeed = props => {
                   color: 'black',
                   fontFamily: 'FuturaDemiC',
                 }}>
-                How much do you need?
+                HOW MUCH FUNDS DO YOU REQUIRE ?
               </Text>
             </View>
             <Text

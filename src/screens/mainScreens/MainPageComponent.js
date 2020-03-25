@@ -72,7 +72,7 @@ const Main = props => {
     lastNameForm.length != 0
       ? setLastNameFormValid(true)
       : setLastNameFormValid(false);
-    phoneForm.length >= 11 ? setPhoneFormValid(true) : setPhoneFormValid(false);
+    phoneForm.length >= 10 ? setPhoneFormValid(true) : setPhoneFormValid(false);
     emailForm.length != 0 && errorEmail === ''
       ? setEmailFormValid(true)
       : setEmailFormValid(false);
@@ -144,9 +144,26 @@ const Main = props => {
     x = x.toString();
     var pattern = /(-?\d+)(\d{3})/;
     while (pattern.test(x)) {
-      x = x.replace(pattern, '$1,$2');
+      x = x.replace(pattern, '$1 $2');
     }
     return x;
+  };
+  const phoneWithCommas = x => {
+    if (x.length <= 9) {
+      x = x.toString();
+      var pattern = /(-?\d+)(\d{3})/;
+      while (pattern.test(x)) {
+        x = x.replace(pattern, '$1 $2');
+      }
+      return x;
+    } else {
+      x = x.toString();
+      var pattern = /(-?\d{3})(-?\d{3})(\d{4})/;
+      while (pattern.test(x)) {
+        x = x.replace(pattern, '$1 $2 $3');
+      }
+      return x;
+    }
   };
   const submit = async () => {
     setLoaderValue(true);
@@ -485,12 +502,14 @@ const Main = props => {
                 </Text>
               </View>
               <TextInput
+                maxLength={12}
                 ref={PhoneRef}
                 onSubmitEditing={() => EmailRef.current.focus()}
                 onChangeText={text => {
-                  validatedInputs(text, 'phone');
+                  let textClear = text.replace(/\D+/g, '');
+                  validatedInputs(textClear, 'phone');
                 }}
-                value={phoneForm}
+                value={phoneForm && phoneWithCommas(phoneForm)}
                 style={[
                   phoneFormFocus && phoneForm.length !== 0
                     ? styles.Input
