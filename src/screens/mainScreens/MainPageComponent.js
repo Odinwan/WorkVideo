@@ -111,7 +111,9 @@ const Main = props => {
   };
 
   const monthlyAmount = async () => {
-    const procent = interestRate / 100;
+    let interest = interestRate.replace(',', '.');
+
+    const procent = interest / 100;
     let result = (youNeed * procent) / 12;
     setImpovement(result.toFixed(1));
   };

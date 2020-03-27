@@ -15,6 +15,7 @@ const width = Dimensions.get('window').width;
 
 const InterestRate = props => {
   const [interestRate, setInterestRate] = useState(0);
+  const [prevValue, setPrevValue] = useState(0);
   const [interestRateInput, setInterestRateInput] = useState(0);
   const [interestRateFocus, setInterestRateFocus] = useState(false);
   const [placeholder, setPlaceholder] = useState('Example: $50,000...');
@@ -28,18 +29,18 @@ const InterestRate = props => {
     focusRef.current.focus();
   }, []);
   const validateInput = text => {
-    let textClear = text.replace(/\D+/g, '');
-    setInterestRate(textClear);
-    setInterestRateInput(textClear);
+    setPrevValue(interestRate);
+    setInterestRate(text);
+    setInterestRateInput(text);
   };
 
   const numberWithCommas = x => {
-    x = x.replace(/\D+/g, '').toString();
-    let pattern = /(-?\d+)(\d{3})/;
-    while (pattern.test(x)) {
-      x = x.replace(pattern, '$1,$2');
+    x = x.replace('%', '');
+    if (prevValue < x) {
+      return `${x}%`;
+    } else {
+      return `${x}`;
     }
-    return `% ${x}`;
   };
   const sumbit = async () => {
     if (!interestRateDisable) {
@@ -75,14 +76,6 @@ const InterestRate = props => {
                 interest Rate
               </Text>
             </View>
-            <Text
-              style={{
-                textAlign: 'center',
-                color: 'grey',
-                fontFamily: 'FuturaDemiC',
-              }}>
-              (approximately)
-            </Text>
             <View
               style={{
                 position: 'relative',
@@ -102,10 +95,10 @@ const InterestRate = props => {
                   setPlaceholder('Example: % 10...');
                 }}
                 onChangeText={text => {
+                  text = text.replace('%', '');
                   validateInput(text);
-                  text = text.replace(/\D+/g, '').toString();
 
-                  if (text > 19.99 || text < 1.99) {
+                  if (text > 20 || text < 2) {
                     setInterestRateDisable(true);
                     setInterestRateFocus(true);
                     text < 1.99
