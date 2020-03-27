@@ -21,7 +21,7 @@ const PropertyValue = props => {
 
   const [propertyDisable, setPropertyDisable] = useState(true);
   const {navigate} = props.navigation;
-  const {youNeed} = props.navigation.state.params;
+  const {youNeed, interestRate} = props.navigation.state.params;
   const [placeholder, setPlaceholder] = useState('Example: $750,000...');
 
   const focusRef = React.createRef();
@@ -45,10 +45,10 @@ const PropertyValue = props => {
 
   const sumbit = () => {
     if (!propertyDisable) {
-      console.log('YOUNEED', youNeed);
-      navigate('ThirdStep', {
+      navigate('FourStep', {
         youNeed: youNeed,
         propertyVal: propertyVal,
+        interestRate: interestRate,
       });
     }
   };

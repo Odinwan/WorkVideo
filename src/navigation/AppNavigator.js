@@ -8,6 +8,7 @@ import MortrageBalance from '../screens/stepScreens/MortrageBalance/MortrageBala
 import SuccessPage from '../screens/mainScreens/SuccessPage';
 import logo from '../../../WorkVideo/assets/images/logo.png';
 import {Image, View, StatusBar} from 'react-native';
+import InterestRate from '../screens/stepScreens/InterestRate/InterestRate';
 
 const navigationOptions = {
   headerTintColor: 'white',
@@ -42,15 +43,10 @@ const navigationOptions = {
 };
 
 const StepStack = createStackNavigator({
-  FirstStep: {
-    screen: DoYouNeed,
-    navigationOptions,
-  },
-  SecondStep: {
-    screen: PropertyValue,
-    navigationOptions,
-  },
-  ThirdStep: {screen: MortrageBalance, navigationOptions},
+  FirstStep: {screen: DoYouNeed, navigationOptions},
+  SecondStep: {screen: InterestRate, navigationOptions},
+  ThirdStep: {screen: PropertyValue, navigationOptions},
+  FourStep: {screen: MortrageBalance, navigationOptions},
   MainPage: {screen: Main, navigationOptions},
 });
 

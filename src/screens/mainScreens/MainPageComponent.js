@@ -12,11 +12,15 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import styles from './mainStyle';
 
 const Main = props => {
-  console.log('props', props);
   const [impovement, setImpovement] = useState(0);
   const [mortrage, setMortrage] = useState(0);
   const [mortrageValue, setMortrageValue] = useState(0);
-  const {youNeed, mortrageVal, propertyVal} = props.navigation.state.params;
+  const {
+    youNeed,
+    mortrageVal,
+    propertyVal,
+    interestRate,
+  } = props.navigation.state.params;
 
   const [nameForm, setNameForm] = useState('');
   const [lastNameForm, setLastNameForm] = useState('');
@@ -42,14 +46,7 @@ const Main = props => {
 
   const {navigate} = props.navigation;
 
-  console.log('props', props);
-
   useEffect(() => {
-    console.log('props', props);
-  }, []);
-
-  useEffect(() => {
-    console.log(mortrage);
     if (mortrage < 1000) {
       setMortrageValue(1000);
     } else if (mortrage > 300000) {
@@ -57,8 +54,6 @@ const Main = props => {
     } else {
       setMortrageValue(mortrage);
     }
-    console.log('youNeed', youNeed);
-    console.log('mortrage', mortrage);
   }, [mortrage, youNeed]);
 
   useEffect(() => {
@@ -116,9 +111,8 @@ const Main = props => {
   };
 
   const monthlyAmount = async () => {
-    console.log('youNeed', youNeed, mortrage);
-    let result = (youNeed * 0.0999) / 12;
-    console.log('result monthlyAmount', result);
+    const procent = interestRate / 100;
+    let result = (youNeed * procent) / 12;
     setImpovement(result.toFixed(1));
   };
 
@@ -126,7 +120,6 @@ const Main = props => {
     let percent = propertyVal * 0.8;
     const result = percent - mortrageVal;
     setMortrage(result.toFixed(0));
-    console.log('result Mortrage', result);
   };
 
   const validate = text => {

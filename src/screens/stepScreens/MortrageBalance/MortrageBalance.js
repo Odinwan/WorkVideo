@@ -23,7 +23,7 @@ const MortrageValue = props => {
   const [placeholder, setPlaceholder] = useState('Example: $350,000...');
 
   const {navigate} = props.navigation;
-  const {youNeed, propertyVal} = props.navigation.state.params;
+  const {youNeed, propertyVal, interestRate} = props.navigation.state.params;
 
   const focusRef = React.createRef();
 
@@ -48,13 +48,11 @@ const MortrageValue = props => {
 
   const sumbit = () => {
     if (!mortrageDisable) {
-      let percent = propertyVal * 0.8;
-      const result = percent - mortrageVal;
-
       navigate('MainPage', {
-        youNeed: youNeed > result ? result : youNeed,
+        youNeed: youNeed,
         propertyVal: propertyVal,
         mortrageVal: mortrageVal,
+        interestRate: interestRate,
       });
     }
   };
