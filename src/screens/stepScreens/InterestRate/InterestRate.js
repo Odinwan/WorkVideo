@@ -9,6 +9,7 @@ import {
   Dimensions,
 } from 'react-native';
 import styles from '../../mainScreens/mainStyle';
+import PropertyValue from '../PropertyValue/PropertyValue';
 
 const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').width;
@@ -29,9 +30,10 @@ const InterestRate = props => {
     focusRef.current.focus();
   }, []);
   const validateInput = text => {
+    let clear = text.replace(/^\.|[^\d\.]/g, '');
     setPrevValue(interestRate);
-    setInterestRate(text);
-    setInterestRateInput(text);
+    setInterestRate(clear);
+    setInterestRateInput(clear);
   };
 
   const numberWithCommas = x => {
@@ -97,8 +99,8 @@ const InterestRate = props => {
                 onChangeText={text => {
                   text = text.replace('%', '');
                   validateInput(text);
-
-                  if (text > 20 || text < 2) {
+                  let clear = text.replace(/^\.|[^\d\.]/g, '');
+                  if (clear > 20 || clear < 2) {
                     setInterestRateDisable(true);
                     setInterestRateFocus(true);
                     text < 1.99
@@ -171,5 +173,7 @@ const InterestRate = props => {
     </View>
   );
 };
-
+InterestRate.navigationOptions = {
+  headerRight: () => <View />,
+};
 export default InterestRate;

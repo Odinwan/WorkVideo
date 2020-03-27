@@ -4,11 +4,11 @@ import {createStackNavigator} from 'react-navigation-stack';
 import PropertyValue from '../screens/stepScreens/PropertyValue/PropertyValue';
 import Main from '../screens/mainScreens/MainPageComponent';
 import DoYouNeed from '../screens/stepScreens/DoYouNeed/DoYouNeed';
+import InterestRate from '../screens/stepScreens/InterestRate/InterestRate';
 import MortrageBalance from '../screens/stepScreens/MortrageBalance/MortrageBalance';
 import SuccessPage from '../screens/mainScreens/SuccessPage';
 import logo from '../../../WorkVideo/assets/images/logo.png';
 import {Image, View, StatusBar} from 'react-native';
-import InterestRate from '../screens/stepScreens/InterestRate/InterestRate';
 
 const navigationOptions = {
   headerTintColor: 'white',

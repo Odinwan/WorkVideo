@@ -6,40 +6,6 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>51AF13B2-7EC8-426B-BEE6-72905C2E122B</key>
-		<dict>
-			<key>className</key>
-			<string>IDECommandLineBuildLog</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>51AF13B2-7EC8-426B-BEE6-72905C2E122B.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>WorkVideo project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>WorkVideo</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Building workspace WorkVideo with scheme WorkVideo and configuration Debug</string>
-			<key>timeStartedRecording</key>
-			<real>606931950.66027904</real>
-			<key>timeStoppedRecording</key>
-			<real>606931952.13756895</real>
-			<key>title</key>
-			<string>Building workspace WorkVideo with scheme WorkVideo and configuration Debug</string>
-			<key>uniqueIdentifier</key>
-			<string>51AF13B2-7EC8-426B-BEE6-72905C2E122B</string>
-		</dict>
 		<key>E2785374-7F5D-43CD-8713-EC5A289B9B55</key>
 		<dict>
 			<key>className</key>
