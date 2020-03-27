@@ -168,7 +168,7 @@ const InterestRate = props => {
                     color: 'white',
                     fontSize: 20,
                   }}>
-                  Get started
+                  Continue
                 </Text>
               </TouchableOpacity>
             </View>
