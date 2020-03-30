@@ -72,7 +72,7 @@ const DoYouNeed = props => {
                   color: 'black',
                   fontFamily: 'FuturaDemiC',
                 }}>
-                How much do you need?
+                How much do you require?
               </Text>
             </View>
             <Text

@@ -136,11 +136,13 @@ const Main = props => {
     setErrorValid('Enter required fields');
   };
   const numberWithCommas = x => {
+    console.log('x', x);
     x = x.toString();
     var pattern = /(-?\d+)(\d{3})/;
     while (pattern.test(x)) {
       x = x.replace(pattern, '$1 $2');
     }
+    console.log('x', x);
     return x;
   };
   const phoneWithCommas = x => {
